@@ -46,6 +46,5 @@ if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
         </nav>
     </body>
     <?PHP require_once "script.php" ?>
-    <?php require_once "footer.php" ?>
 
     </html>
