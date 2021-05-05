@@ -1,0 +1,41 @@
+#footer{
+    background-color: #222;
+    opacity: .8;
+    color: white;
+    padding:10px 0px 10px 0px;
+}
+#line{
+    opacity: 1;
+    width: 50%;
+    align-items: center;
+    background-color: black; 
+}
+
+#location{
+    text-align: center;
+}
+#address{
+    padding-top:8px;
+    padding-bottom:8px;
+    font-size: small;
+}
+
+#socialTags{
+    text-align: center;
+}
+
+#social{
+    padding-top:8px;
+    padding-bottom:8px
+}
+#socialRow{
+    padding:0px 60px 0px 60px ;
+}
+#helpCentre{
+    text-align: center;
+}
+#info{
+    padding-top:8px;
+    text-align: left;
+    font-size: small;
+}
