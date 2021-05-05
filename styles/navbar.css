@@ -1,3 +1,8 @@
+#navigation{
+    border-radius: 0px;
+    background-color: gray;
+    border: 0px;
+}
 #navbarItems{
     float: right;
 }
