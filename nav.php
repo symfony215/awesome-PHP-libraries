@@ -7,11 +7,11 @@ if ($count = 1) {
 }
 $loginStatus = false;
 if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
+
     $loginStatus = true;
-    // echo ("logged in");
 } else {
+
     $loginStatus = false;
-    //echo ("not logged in please try again");
 }
 
 ?>
@@ -28,8 +28,8 @@ if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
     <body>
         <nav class="navbar navbar-expand-lg navbar-light" id="navigation">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="home.php">Thejana's Bookstore</a>
+                <button class="navbar-toggler" id="togglerButton" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -41,10 +41,14 @@ if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
                         <a class="nav-link" href="#"><i class="bi bi-person-circle"> hi <?= htmlentities($_SESSION['username']) ?></i></a>
 
                     </div>
+                    <div>
+
+                    </div>
                 </div>
             </div>
         </nav>
     </body>
     <?PHP require_once "script.php" ?>
+    <script src="js/nav.js"></script>
 
     </html>
