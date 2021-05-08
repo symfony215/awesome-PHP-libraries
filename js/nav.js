@@ -1,5 +1,5 @@
 function myFunction() {
-  document.getElementById("navbarItems").classList.toggle("show");
+  document.getElementById("myDropdown").classList.toggle("show");
 }
 
 
