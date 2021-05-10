@@ -29,7 +29,7 @@ if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
         <nav class="navbar navbar-expand-md navbar-light" id="navigation">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home.php">Thejana's Bookstore</a>
-                <button class="navbar-toggler d-sm-none" id="togglerButton" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" id="togglerButton" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -40,14 +40,6 @@ if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
                         <a class="nav-link" href="#"><i class="bi bi-cart"> </i></a>
                         <a class="nav-link" href="#"><i class="bi bi-person-circle"> hi <?= htmlentities($_SESSION['username']) ?> </i></a>
 
-                    </div>
-                </div>
-                <div class="dropdown d-md-none">
-                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
                     </div>
                 </div>
             </div>
