@@ -26,7 +26,7 @@
     display: inline-block;
   }
   
-  .dropdown-content {
+  /* .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -36,6 +36,9 @@
     z-index: 1;
     right: 0;
   }
+
+  } */
+
   
   .dropdown-content a {
     color: black;
