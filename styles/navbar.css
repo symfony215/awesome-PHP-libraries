@@ -7,17 +7,25 @@
 #navbarItems{
     float: right;
 }
+#brand{
+  font-family: fantasy;
+}
 .dropbtn {
     background-color: gray;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+    color: black;
+    padding: 5px;
+    font-size: 20px;
+    border: 1px;
+    border-radius: 3px;
   }
+
   
   .dropbtn:hover, .dropbtn:focus {
     background-color: gray;
+  }
+  .dropbtn:focus{
+    background-color: gray;
+    outline: 1px solid;
   }
   
   .dropdown {
@@ -48,3 +56,24 @@
   .dropdown a:hover {background-color: #ddd;}
   
   .show {display: block;}
+
+  /* media quaries */
+@media(min-width:300px){
+
+  #brand{
+    font-size: 15px;
+  }
+  #linknames{
+    font-size: 14px;
+  }
+}
+
+@media(min-width:576px){
+  #brand{
+    font-size:18px;
+  }
+
+  #linknames{
+    font-size: 15px;
+  }
+}
