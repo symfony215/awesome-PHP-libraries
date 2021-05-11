@@ -1,5 +1,10 @@
 /* Slide-show*/
 
+#slideShow{
+    width: auto;
+    height:300px;
+}
+
 .carousel-item {
     border: 2xp;
     height: 550px;
