@@ -1,7 +1,7 @@
 <?php
 
 
-function component($productname, $productprice, $productimg, $productid){
+function component($productname, $productprice,$productimg, $productid){
     $element="
     
     <div class=\"col-md-3 col-sm-6 my-3 my-md-0\">
@@ -19,12 +19,9 @@ function component($productname, $productprice, $productimg, $productid){
                     <i class=\"fas fa-star\"></i>
                     <i class=\"far fa-star\"></i>
                 </h6>
-                <p class=\"card-text\">
-                    Some quick example text to build on the card.
-                </p>
                 <h5>
-                    <small><s class=\"text-secondary\">$19.90</s></small>
-                    <span class=\"price\">$productprice</span>
+                    <small><s class=\"text-secondary\">$33</s></small>
+                    <span class=\"price\">$$productprice</span>
                 </h5>
 
                 <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"add\">Add to Cart <i class=\"fas fa-shopping-cart\"></i></button>

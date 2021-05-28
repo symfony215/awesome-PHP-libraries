@@ -75,20 +75,42 @@
         require_once ("./home/item-component.php");
 
         //Create instance of createdb class
-        $database=new CreateDb("Productdb", "productb");
+       // $database=new CreateDb("Productdb", "productb");
+      
     ?>
+    
 
 
     <div class="container">
         <div class="row text-center py-5">
-            <?php
-                $result = $database->getData();
+        <?php   
+            $sql = "SELECT * FROM productb";
+            $result = mysqli_query($con, $sql);
+               // $result = $database->getData();
+               if(mysqli_num_rows($result) > 0){
                 while ($row = mysqli_fetch_assoc($result)){
                component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
             }
+        }
             ?>
         </div>
-    </div>
+    </div> 
+
+    <!--testing-->
+    <div class="container">
+        <div class="row text-center py-5">
+        <?php   
+            $sql = "SELECT * FROM authortb";
+            $result = mysqli_query($con, $sql);
+               // $result = $database->getData();
+               if(mysqli_num_rows($result) > 0){
+                while ($row = mysqli_fetch_assoc($result)){
+               component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
+            }
+        }
+            ?>
+        </div>
+    </div>       
 
    
     <?php require_once "footer.php"?>
