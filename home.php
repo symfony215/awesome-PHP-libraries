@@ -17,34 +17,36 @@
 
 <body>
 
-    <!-- navbar is here  -->
-    <?php require_once "nav.php" ?>
 
+    <header>
+        <?php require_once "nav.php" ?>
+    </header>
+    <?php require_once "script.php" ?>
 
     <!--slide show-->
-    <div class="container-fluid" id="slideShow">
-        <div id="slide-show" class="carousel slide container-fluid" data-ride="carousel">
+    <div class="container-fluid">
+        <div id="slide-show" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#slide-show" data-slide-to="0" class="active"></li>
                 <li data-target="#slide-show" data-slide-to="1"></li>
                 <li data-target="#slide-show" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Image/HomeImage!.jpg" class="d-block w-100" alt="Image">
-                    <div id="slide-show-btn" class="carousel-caption ">
+                <div class="carousel-item active" id="slide_img">
+                    <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
+                    <div id="slide-show-btn" class="carousel-caption d d-md">
                         <button type="button" class="btn btn-secondary">See more</button>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="Image/HomeImage!.jpg" class="d-block w-100" alt="Image">
-                    <div id="slide-show-btn" class="carousel-caption d-none d-md-block">
+                <div class="carousel-item" id="slide_img">
+                    <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
+                    <div id="slide-show-btn" class="carousel-caption d d-md">
                         <button type="button" class="btn btn-secondary">See more</button>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="Image/HomeImage.jpg" class="d-block w-100" alt="Image">
-                    <div id="slide-show-btn" class="carousel-caption d-none d-md-block">
+                <div class="carousel-item" id="slide_img">
+                    <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
+                    <div id="slide-show-btn" class="carousel-caption d d-md">
                         <button type="button" class="btn btn-secondary">See more</button>
                     </div>
                 </div>
@@ -61,9 +63,12 @@
     </div>
 
     <!--header1-->
-    <div class="container-fluid" id="header1">
-        <h5>Top selling</h5>
+    <div class="container-fluid">
+        <div class="header" id="header1">
+            <h5>Top selling</h5>
+        </div>
     </div>
+    <hr>
 
     <!--top selling item-->
     <?php
@@ -71,16 +76,38 @@
     require_once("./home/item-component.php");
 
     //Create instance of createdb class
-    $database = new CreateDb("Productdb", "productb");
+    // $database=new CreateDb("Productdb", "productb");
+
     ?>
+
 
 
     <div class="container">
         <div class="row text-center py-5">
             <?php
-            $result = $database->getData();
-            while ($row = mysqli_fetch_assoc($result)) {
-                component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
+            $sql = "SELECT * FROM productb";
+            $result = mysqli_query($con, $sql);
+            // $result = $database->getData();
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
+                }
+            }
+            ?>
+        </div>
+    </div>
+
+    <!--testing-->
+    <div class="container">
+        <div class="row text-center py-5">
+            <?php
+            $sql = "SELECT * FROM authortb";
+            $result = mysqli_query($con, $sql);
+            // $result = $database->getData();
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
+                }
             }
             ?>
         </div>
@@ -88,7 +115,6 @@
 
 
     <?php require_once "footer.php" ?>
-    <?php require_once "script.php" ?>
 </body>
 
 </html>
