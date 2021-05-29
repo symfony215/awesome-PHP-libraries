@@ -66,9 +66,9 @@
     // sql to create new table for author
     $sql = " CREATE TABLE IF NOT EXISTS authortb
     (id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-     product_name VARCHAR (25) NOT NULL,
-     product_price FLOAT,
-     product_image VARCHAR (100)
+     author_name VARCHAR (25) NOT NULL,
+     author_since FLOAT,
+     author_image VARCHAR (100)
     );";
 
     if (!mysqli_query($con, $sql)){

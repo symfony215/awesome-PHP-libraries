@@ -57,3 +57,35 @@
             background: lightblue;
             background: radial-gradient(rgb(26, 24, 24) 30%, lightblue 70%);
         }
+
+        /*header2*/
+
+        #header2 {
+            color: rgb(3, 3, 3);
+            padding-left: 50px;
+            }
+
+         /*top author*/
+         #author img{
+            margin top: -50px;
+         }
+
+         #author card{
+            border-radius: 0px;
+            box-shadow: 5px 5px 15px #6c757d;;
+            transition: all 0.3s ease-in;
+            -webkit-transition: all 0.3s ease-in;
+            -moz-transition: all 0.3s ease-in;
+         }
+
+         #author .card:hover{
+            background: #6c757d;;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 5px 5px 10px #9E9E9E;
+         }
+
+         #author .card:hover h3, #author .card:hover i{
+            color: #fff;
+         }
