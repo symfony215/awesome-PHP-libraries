@@ -18,9 +18,9 @@
 <body>
 
 
-    <header>
-        <?php require_once "nav.php" ?>
-    </header>
+
+    <?php require_once "nav.php" ?>
+
     <?php require_once "script.php" ?>
 
     <!--slide show-->
