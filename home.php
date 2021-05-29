@@ -32,7 +32,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="Image/HomeImage!.jpg" class="d-block w-100" alt="Image">
-                    <div id="slide-show-btn" class="carousel-caption d-none d-md-block">
+                    <div id="slide-show-btn" class="carousel-caption ">
                         <button type="button" class="btn btn-secondary">See more</button>
                     </div>
                 </div>
