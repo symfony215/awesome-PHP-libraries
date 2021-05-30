@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,17 @@
     <title>About us</title>
 
     <link rel="stylesheet" href="./styles/about.css">
-    <?php require_once "head.php"?>
+    <?php require_once "head.php" ?>
 
 </head>
 
 <body>
-<header>
-        <?php require_once "nav.php"?>
+    <header>
+        <?php require_once "nav.php" ?>
     </header>
-    <?php require_once "script.php"?>
+    <?php require_once "script.php" ?>
 
-    
+
     <div class="container-fluid">
 
         <div class="section-main">
@@ -41,16 +42,17 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="card">
-                        <img src="books.jpg" class="img-fluid" alt="books">
-                    </div>
+                        <img src="./Image/books.jpg" class="img-fluid" alt="books">
                     </div>
                 </div>
             </div>
-
         </div>
 
     </div>
 
-    <?php require_once "footer.php"?>
+    </div>
+
+    <?php require_once "footer.php" ?>
 </body>
+
 </html>
