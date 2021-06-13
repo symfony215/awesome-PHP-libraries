@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/signup.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
+    <?php require_once "head.php" ?>
     <!-- <link rel="stylesheet" href="../css/mobile-style.css"> -->
 </head>
 
@@ -18,7 +19,6 @@
     <header>
         <?php require_once "nav.php" ?>
     </header>
-    <?php require_once "script.php" ?>
     <section class="signup">
         <div class="container text-center">
             <div class="row">
@@ -87,6 +87,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
     <?php require_once "footer.php" ?>
+    <?php require_once "script.php" ?>
 </body>
 
 </html>

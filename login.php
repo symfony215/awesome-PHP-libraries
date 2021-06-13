@@ -24,12 +24,12 @@
     <div class="login">
         <div class="container text-center">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 col-xs-12">
                     <div class="pray">
                         <img src="./Image/image.png" alt="img">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-xs-12">
                     <div class="panel text-center">
                         <h1>Sign In to Store</h1>
                         <div class="signin">
