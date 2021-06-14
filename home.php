@@ -92,7 +92,7 @@
             // $result = $database->getData();
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
+                    component($row['product_name'], $row['product_price'], $row['second_price'],$row['product_image'], $row['id']);
                 }
             }
             ?>

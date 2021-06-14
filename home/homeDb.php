@@ -45,6 +45,7 @@
         (id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
          product_name VARCHAR (25) NOT NULL,
          product_price FLOAT,
+         second_price FLOAT,
          product_image VARCHAR (100)
         );";
 
