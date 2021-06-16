@@ -1,8 +1,9 @@
 <?php
 
 
-function component($productname,$productprice,$secondprice,$productimg, $productid,){
-    $element="
+function component($productname, $productprice, $secondprice, $productimg, $productid)
+{
+    $element = "
     
     <div class=\"col-md-3 col-sm-6 my-3 my-md-0\">
     <form  action=\"home.php\" method=\"post\">
@@ -34,4 +35,3 @@ function component($productname,$productprice,$secondprice,$productimg, $product
     ";
     echo $element;
 }
-?>
