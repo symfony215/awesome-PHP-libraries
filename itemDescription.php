@@ -1,9 +1,9 @@
 <?php
 
-
+$name = $_GET['name'];
 require_once "home/homeDb.php";
 
-$sql1 = "SELECT * FROM productb WHERE product_name='book1'";
+$sql1 = "SELECT * FROM productb WHERE product_name='$name'";
 $result = $con->query($sql1);
 $row = $result;
 
@@ -43,7 +43,7 @@ while ($rows = $result->fetch_assoc()) {
 
 
             <div class="col-md-6 col-sm-6">
-                <div id="itemName"> <?= htmlentities($name) ?> Janadhipathi Thatta</div>
+                <div id="itemName"> <?= htmlentities($name) ?></div>
                 <div id="catogary">Electronic items</div>
                 <div id="itemPrice">Rs <?= htmlentities($price) ?>00.00 &nbsp&nbsp&nbsp <s class="text-secondary"> <?= htmlentities($second) ?></s></div>
                 <div id="itemDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis corrupti libero aliquid voluptatem delectus cumque at perferendis excepturi veritatis. Facilis, veniam doloribus? Sapiente facere atque fugit ea dicta tenetur. lore</div>

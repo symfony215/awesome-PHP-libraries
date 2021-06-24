@@ -9,7 +9,9 @@ function component($productname, $productprice, $secondprice, $productimg, $prod
     <form  action=\"home.php\" method=\"post\">
         <div id=\"item-grid\"class=\"card shadow\">
             <div id=\"img\">
+            <a href=\"itemDescription.php?name=$productname\" onclick=\"post\">
                 <img  src=\"$productimg\" alt=\"Image1\" class=\"img-fluid\">
+                </a>
             </div>
             <div class=\"card-body\">
                 <h6 class=\"card-title\">$productname</h6>
