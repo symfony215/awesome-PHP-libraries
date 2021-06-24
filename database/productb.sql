@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2021 at 06:04 PM
+-- Generation Time: Jun 14, 2021 at 12:17 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -31,6 +31,7 @@ CREATE TABLE `productb` (
   `id` int(11) NOT NULL,
   `product_name` varchar(25) NOT NULL,
   `product_price` float DEFAULT NULL,
+  `second_price` float DEFAULT NULL,
   `product_image` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -38,11 +39,11 @@ CREATE TABLE `productb` (
 -- Dumping data for table `productb`
 --
 
-INSERT INTO `productb` (`id`, `product_name`, `product_price`, `product_image`) VALUES
-(1, 'Book1', 23, './Image/book1.jpg'),
-(2, 'Book2', 45, './Image/book1.jpg'),
-(3, 'Book3', 23, './Image/book1.jpg'),
-(4, 'Book4', 23, './Image/book1.jpg');
+INSERT INTO `productb` (`id`, `product_name`, `product_price`, `second_price`, `product_image`) VALUES
+(1, 'Book1', 35, 40, './Image/book1.jpg'),
+(2, 'Book2', 54, 60, './Image/book1.jpg'),
+(3, 'Book3', 34, 44, './Image/book1.jpg'),
+(4, 'Book4', 45, 50, './Image/book1.jpg');
 
 --
 -- Indexes for dumped tables

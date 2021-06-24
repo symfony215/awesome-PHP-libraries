@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2021 at 06:04 PM
+-- Generation Time: Jun 14, 2021 at 12:17 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -40,7 +40,8 @@ CREATE TABLE `authortb` (
 
 INSERT INTO `authortb` (`id`, `author_name`, `author_since`, `author_image`) VALUES
 (1, 'aryaa stark', 2017, './image/author23.jpg'),
-(13, 'ragnar lothbrok', 2020, './image/author24.jpg');
+(13, 'ragnar lothbrok', 2020, './image/author24.jpg'),
+(19, 'Napoleon Hill', 1991, './Image/napoleon.jpg');
 
 --
 -- Indexes for dumped tables
@@ -60,7 +61,7 @@ ALTER TABLE `authortb`
 -- AUTO_INCREMENT for table `authortb`
 --
 ALTER TABLE `authortb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
