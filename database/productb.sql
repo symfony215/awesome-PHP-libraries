@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2021 at 12:17 PM
+-- Generation Time: Jun 25, 2021 at 02:45 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -32,18 +32,19 @@ CREATE TABLE `productb` (
   `product_name` varchar(25) NOT NULL,
   `product_price` float DEFAULT NULL,
   `second_price` float DEFAULT NULL,
-  `product_image` varchar(100) DEFAULT NULL
+  `product_image` varchar(100) DEFAULT NULL,
+  `product_description` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `productb`
 --
 
-INSERT INTO `productb` (`id`, `product_name`, `product_price`, `second_price`, `product_image`) VALUES
-(1, 'Book1', 35, 40, './Image/book1.jpg'),
-(2, 'Book2', 54, 60, './Image/book1.jpg'),
-(3, 'Book3', 34, 44, './Image/book1.jpg'),
-(4, 'Book4', 45, 50, './Image/book1.jpg');
+INSERT INTO `productb` (`id`, `product_name`, `product_price`, `second_price`, `product_image`, `product_description`) VALUES
+(1, 'Book1', 35, 40, './Image/book1.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis corrupti libero aliquid voluptatem delectus cumque at perferendis excepturi veritatis. Facilis, veniam doloribus? Sapiente facere atque fugit ea dicta tenetur. lore'),
+(2, 'Book2', 54, 60, './Image/book1.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis corrupti libero aliquid voluptatem delectus cumque at perferendis excepturi veritatis. Facilis, veniam doloribus? Sapiente facere atque fugit ea dicta tenetur. lore'),
+(3, 'Book3', 34, 44, './Image/book1.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis corrupti libero aliquid voluptatem delectus cumque at perferendis excepturi veritatis. Facilis, veniam doloribus? Sapiente facere atque fugit ea dicta tenetur. lore'),
+(4, 'Book4', 45, 50, './Image/book1.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis corrupti libero aliquid voluptatem delectus cumque at perferendis excepturi veritatis. Facilis, veniam doloribus? Sapiente facere atque fugit ea dicta tenetur. lore');
 
 --
 -- Indexes for dumped tables
