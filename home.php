@@ -64,13 +64,19 @@
         </div>
     </div>
 
+    <br>
+    <br>
+
     <!--header1-->
     <div class="container-fluid">
         <div class="header" id="header1">
             <h5>Top selling</h5>
         </div>
     </div>
-    <hr>
+    <div class="container-fluid">
+        <hr>
+    </div>
+    
 
     <!--top selling item-->
     <?php
@@ -95,9 +101,28 @@
                     component($row['product_name'], $row['product_price'], $row['second_price'], $row['product_image'], $row['id']);
                 }
             }
+            
             ?>
         </div>
     </div>
+
+
+    <div class="container">
+        <div class="row text-center py-5">
+            <?php
+            $sql = "SELECT * FROM productb";
+            $result = mysqli_query($con, $sql);
+            // $result = $database->getData();
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    component($row['product_name'], $row['product_price'], $row['second_price'], $row['product_image'], $row['id']);
+                }
+            }
+            
+            ?>
+        </div>
+    </div>
+    
 
 
 
@@ -107,7 +132,9 @@
             <h5>Top Author</h5>
         </div>
     </div>
-    <hr>
+    <div class="container-fluid">
+        <hr>
+    </div>
     <!--top author-->
     <?php require_once("./home/author-component.php");
     require_once("./home/homeDb.php"); ?>

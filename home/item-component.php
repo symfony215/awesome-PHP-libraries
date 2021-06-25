@@ -7,6 +7,7 @@ function component($productname, $productprice, $secondprice, $productimg, $prod
     
     <div class=\"col-md-3 col-sm-6 my-3 my-md-0\">
     <form  action=\"home.php\" method=\"post\">
+        <div class=\"owl-carousel owl-theme\">
         <div id=\"item-grid\"class=\"card shadow\">
             <div id=\"img\">
             <a href=\"itemDescription.php?name=$productname\" onclick=\"post\">
@@ -27,10 +28,11 @@ function component($productname, $productprice, $secondprice, $productimg, $prod
                     <span class=\"price\">$$productprice</span>
                 </h6>
 
-                <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"add\">Add to Cart <i class=\"fas fa-shopping-cart\"></i></button>
+                <button type=\"submit\" class=\"btn btn-outline-info my-3\" name=\"add\">Add to Cart <i class=\"fas fa-shopping-cart\"></i></button>
                 <input type='hidden' name='product_id' value='$productid'>
             </div>    
         </div>
+         </div>
     </form>
         
     </div>

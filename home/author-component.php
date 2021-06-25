@@ -8,7 +8,9 @@ function component1($authorname, $authorsince,$authorimg, $authorid){
             <div id=\"author\">
                 <div class=\"card\">
                     <div class=\"card-body\">
+                        <a href=\"authorDes.php?name=$authorname\" onclick=\"post\">
                         <img src=\"$authorimg\" alt=\"\" class=\"img-fluid rounded-circle w-50 mb-3\">
+                        </a>
                         <h3>$authorname</h3>
                         <h5>author since $authorsince</h5>
                     </div>

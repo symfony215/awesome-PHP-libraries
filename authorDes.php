@@ -1,6 +1,22 @@
+<?php
+
+    $name= $_GET['name'];
+    require_once "home/homeDb.php";
+
+    $sql = "SELECT * FROM authortb WHERE author_name='$name'";
+    $result = $con->query($sql);
+    $row = $result;
+
+    while ($rows= $result->fetch_assoc()){
+        $since = $rows['author_since'];
+        $name = $rows['author_name'];
+        $image = $rows['author_image'];
+        $dis = $rows['author_description'];
+
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +27,13 @@
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/authors.css">
 
+    <!--font awsome-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles/home_style.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/navbar.css" />
+
     <?php require_once "head.php" ?>
 
 </head>
@@ -19,62 +42,42 @@
     <header>
         <?php require_once "nav.php" ?>
     </header>
-    <?php require_once "script.php" ?>
+    <br>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row justify-content-center">
-            <h2>Arya Stark</h2>
+            <h2 class="text-center"><?=htmlentities($name)?></h2>
         </div>
         <div class="row">
             <div class="col-sm-4">
                 <div class="card h-75">
-                    <img src="./Image/author23.jpg" class="img-fluid" alt="books">
+                    <img src="<?=htmlentities($image)?>" class="img-fluid" alt="books">
                 </div>
             </div>
             <div class="col-sm-8">
                 <div class="card h-75">
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque facilis quis expedita quaerat, ipsam dicta, inventore nobis animi nisi dolorem aspernatur tenetur? Sed quas aspernatur ad. Nesciunt delectus modi distinctio inventore ratione non reprehenderit veniam possimus adipisci enim. Deleniti ratione deserunt atque iure doloribus tenetur, perferendis delectus quaerat! Suscipit dolorem quisquam ipsum quos facere minus. Reiciendis adipisci atque illum, libero vitae amet ipsum, quos earum blanditiis provident nisi omnis error culpa ut dolorum perferendis, accusantium ad aperiam illo. Amet, eligendi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit iure blanditiis architecto aperiam, officiis natus voluptatibus quidem ullam voluptatum perferendis quibusdam perspiciatis temporibus iusto tempora, officia beatae eveniet laborum dolorem.</p><br>
+                        <p class="card-text"><?=htmlentities($dis)?></p><br>
                         <div class="text-center">
-                            <a href="#" class="btn btn-default" style="width: 250px;">Read more</a>
+                            <button type="button" class="btn btn-secondary">See more</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-<div class="row">
-            <h4>Best selling</h4>
-        </div>
 
-<!--top selling item-->
-<?php
-    require_once("./home/homeDb.php");
-    require_once("./home/item-component.php");
-
-    //Create instance of createdb class
-    // $database=new CreateDb("Productdb", "productb");
-
-    ?>
+<!--header2-->
 
 <div class="container">
-    <div class="row text-center py-5">
-        <?php
-            $sql = "SELECT * FROM productb";
-            $result = mysqli_query($con, $sql);
-            // $mysqli_ = $database->getData();
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    component($row['product_name'], $row['product_price'], $row['second_price'],$row['product_image'], $row['id']);
-                }
-            }
-            ?>
-    </div>
+            <h4>Other books by the author</h4>
 </div>
 
-<div class="row">
-            <h4>Other books of the author</h4>
-        </div>
+<div class="container-fluid">
+    <hr>
+</div>
+
 
 <!--other books-->
     <?php
@@ -100,6 +103,15 @@
             ?>
         </div>
     </div>
+    <!--header3-->
+    <div class="container-fluid">
+        <div class="header" id="header2">
+            <h5>Top Author</h5>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <hr>
+    </div>
 
     <!--top author-->
     <?php require_once("./home/author-component.php");
@@ -121,6 +133,7 @@
         </div>
     </div>
 
+    <?php require_once "script.php" ?>
     <?php require_once "footer.php" ?>
 </body>
 
