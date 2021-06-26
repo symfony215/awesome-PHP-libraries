@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2021 at 02:45 PM
+-- Generation Time: Jun 26, 2021 at 07:17 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -40,9 +40,9 @@ CREATE TABLE `authortb` (
 --
 
 INSERT INTO `authortb` (`id`, `author_name`, `author_since`, `author_image`, `author_description`) VALUES
-(1, 'aryaa stark', 2017, './image/author23.jpg', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque facilis quis expedita quaerat, ipsam dicta, inventore nobis animi nisi dolorem aspernatur tenetur? Sed quas aspernatur ad. Nesciunt delectus modi distinctio inventore ratione non reprehenderit veniam possimus adipisci enim. Deleniti ra'),
-(13, 'ragnar lothbrok', 2020, './image/author24.jpg', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque facilis quis expedita quaerat, ipsam dicta, inventore nobis animi nisi dolorem aspernatur tenetur? Sed quas aspernatur ad. Nesciunt delectus modi distinctio inventore ratione non reprehenderit veniam possimus adipisci enim. Deleniti ratione deserunt atque iure doloribus tenetur, perferendis delectus quaerat! Suscipit dolorem quisquam ipsum quos facere minus. Reiciendis adipisci atque illum, libero vitae amet ipsum, quos earum blanditiis provident nisi omnis error culpa ut dolorum perferendis, accusantium ad aperiam illo. Amet, eligendi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit iure blanditiis architecto aperiam, officiis natus voluptatibus quidem ullam voluptatum perferendis quibusdam perspiciatis temporibus iusto tempora, officia beatae eveniet laborum dolorem.'),
-(19, 'Napoleon Hill', 1991, './Image/napoleon.jpg', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque facilis quis expedita quaerat, ipsam dicta, inventore nobis animi nisi dolorem aspernatur tenetur? Sed quas aspernatur ad. Nesciunt delectus modi distinctio inventore ratione non reprehenderit veniam possimus adipisci enim. Deleniti ratione deserunt atque iure doloribus tenetur, perferendis delectus quaerat! Suscipit dolorem quisquam ipsum quos facere minus. Reiciendis adipisci atque illum, libero vitae amet ipsum, quos earum blanditiis provident nisi omnis error culpa ut dolorum perferendis, accusantium ad aperiam illo. Amet, eligendi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit iure blanditiis architecto aperiam, officiis natus voluptatibus quidem ullam voluptatum perferendis quibusdam perspiciatis temporibus iusto tempora, officia beatae eveniet laborum dolorem.');
+(1, 'Becky Albertalli', 2017, './image/author_BA.jpg', 'Becky Albertalli is the author of the acclaimed novels Simon vs. the Homo Sapiens Agenda (film: Love, Simon), The Upside of Unrequited, and Leah on the Offbeat. She is also the co-author of What If It\'s Us with Adam Silvera. A former clinical psychologist who specialized in working with children and teens, Becky lives with her family in Atlanta. You can visit her online at www.beckyalbertalli.com.'),
+(2, 'Maureen Johnson', 2020, './image/author_MJ.jpg', 'Becky Albertalli is the author of the acclaimed novels Simon vs. the Homo Sapiens Agenda (film: Love, Simon), The Upside of Unrequited, and Leah on the Offbeat. She is also the co-author of What If It\'s Us with '),
+(3, 'William W. Johnstone', 1991, './Image/author_WJ.jpg', 'Blood, Guts, and Glory: Smoke Jensen: American Legend (Mountain Man)');
 
 --
 -- Indexes for dumped tables
