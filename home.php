@@ -37,7 +37,7 @@
                 <div class="carousel-item active" id="slide_img">
                     <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
                     <div id="slide-show-btn" class="carousel-caption d d-md">
-                        <button type="button" class="btn btn-secondary">See more</button>
+                        <button type="button" class="btn btn-outline-info">See more</button>
                     </div>
                 </div>
                 <div class="carousel-item" id="slide_img">
@@ -93,7 +93,7 @@
     <div class="container">
         <div class="row text-center py-5">
             <?php
-            $sql = "SELECT * FROM productb";
+            $sql = "SELECT * FROM productb LIMIT 0,4";
             $result = mysqli_query($con, $sql);
             // $result = $database->getData();
             if (mysqli_num_rows($result) > 0) {
@@ -110,7 +110,7 @@
     <div class="container">
         <div class="row text-center py-5">
             <?php
-            $sql = "SELECT * FROM productb";
+            $sql = "SELECT * FROM productb LIMIT 5,4";
             $result = mysqli_query($con, $sql);
             // $result = $database->getData();
             if (mysqli_num_rows($result) > 0) {

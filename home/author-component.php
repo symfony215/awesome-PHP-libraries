@@ -11,8 +11,8 @@ function component1($authorname, $authorsince,$authorimg, $authorid){
                         <a href=\"authorDes.php?name=$authorname\" onclick=\"post\">
                         <img src=\"$authorimg\" alt=\"\" class=\"img-fluid rounded-circle w-50 mb-3\">
                         </a>
-                        <h3>$authorname</h3>
-                        <h5>author since $authorsince</h5>
+                        <h5>$authorname</h5>
+                        <h6>author since $authorsince</h6>
                     </div>
                 </div>
             </div>

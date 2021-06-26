@@ -50,7 +50,7 @@ while ($rows = $result->fetch_assoc()) {
                     <div class="col-md-6 col-sm-6" id="desc">
                         <div id="itemName"> <?= htmlentities($name) ?></div>
                         <div id="catogary">Electronic items</div>
-                        <div id="itemPrice">Rs <?= htmlentities($price) ?>00.00 &nbsp&nbsp&nbsp <s class="text-secondary"> <?= htmlentities($second) ?></s></div>
+                        <div id="itemPrice">$ <?= htmlentities($price) ?> <s class="text-secondary">   $<?= htmlentities($second) ?></s></div>
                         <div id="itemDescription"><?= htmlentities($dis) ?></div>
                         <div class="row" id="Buttons">
                             <!-- <div class="col-md-2"></div> -->

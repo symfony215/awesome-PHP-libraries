@@ -43,7 +43,7 @@
         <?php require_once "nav.php" ?>
     </header>
     <br>
-
+    <!--Author desctiption-->
     <div class="container">
         <div class="row justify-content-center">
             <h2 class="text-center"><?=htmlentities($name)?></h2>
@@ -59,7 +59,7 @@
                     <div class="card-body">
                         <p class="card-text"><?=htmlentities($dis)?></p><br>
                         <div class="text-center">
-                            <button type="button" class="btn btn-secondary">See more</button>
+                            <button type="button" class="btn btn-outline-info">See more</button>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
     <div class="container">
         <div class="row text-center py-5">
             <?php
-            $sql = "SELECT * FROM productb";
+            $sql = "SELECT * FROM productb LIMIT 0,8";
             $result = mysqli_query($con, $sql);
             // $result = $database->getData();
             if (mysqli_num_rows($result) > 0) {
