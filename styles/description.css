@@ -17,6 +17,12 @@ body{
     margin-bottom: 30px;
 }
 
+#product-img img {
+    margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 #itemName{
     font-size: xx-large;
     color: black;
