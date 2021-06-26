@@ -68,6 +68,9 @@ body{
     #cartButton{
         font-size: small;
     }
+    #desc{
+        margin-top: 10px;
+    }
     
 }
 
