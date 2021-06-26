@@ -58,7 +58,7 @@
 
 @media(min-width:300px){
     #brand{
-        font-size: 15px;
+        font-size: 14px;
       }
       #linknames{
         font-size: 14px;
@@ -70,9 +70,24 @@
         padding-left: 10px;
         font-size: 16px;
     }
+
+    #logo{
+        width: 60px;
+        height: 30px;
+    }
+    #linknames{
+        font-size: small;
+    }
+
     }
 
     @media(min-width:576px){
+
+        #logo{
+            width: 80px;
+            height: 40px;
+        }
+
         #brand{
           font-size:18px;
         }
