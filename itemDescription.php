@@ -34,34 +34,44 @@ while ($rows = $result->fetch_assoc()) {
 <body>
 
     <?php require_once "nav.php" ?>
+    <div class="row">
 
-    <div class="container" id="itemCard">
-        <div class="row">
-            <div class="col-md-6 col-sm-6" id="product-img" style=" width:100%; height:100%">
+        <div class="col-sm-2 col-md-3"></div>
+        <div class="col-sm-8 col-md-6">
 
-                <img src="<?= htmlentities($image) ?>" alt="product">
-            </div>
+            <div class="container" id="itemCard">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6" id="product-img" style=" width:100%; height:100%">
 
-
-            <div class="col-md-6 col-sm-6">
-                <div id="itemName"> <?= htmlentities($name) ?></div>
-                <div id="catogary">Electronic items</div>
-                <div id="itemPrice">Rs <?= htmlentities($price) ?>00.00 &nbsp&nbsp&nbsp <s class="text-secondary"> <?= htmlentities($second) ?></s></div>
-                <div id="itemDescription"><?= htmlentities($dis) ?></div>
-                <div class="row" id="Buttons">
-                    <div class="col-2"></div>
-                    <div class="col">
-                        <button class="btn btn-outline-info my-3" id="buyButton">Buy Now</button>
+                        <img src="<?= htmlentities($image) ?>" alt="product">
                     </div>
-                    <div class="col">
-                        <button class="btn btn-outline-info my-3" id="cartButton">Add To Cart</button>
+
+
+                    <div class="col-md-6 col-sm-6" id="desc">
+                        <div id="itemName"> <?= htmlentities($name) ?></div>
+                        <div id="catogary">Electronic items</div>
+                        <div id="itemPrice">Rs <?= htmlentities($price) ?>00.00 &nbsp&nbsp&nbsp <s class="text-secondary"> <?= htmlentities($second) ?></s></div>
+                        <div id="itemDescription"><?= htmlentities($dis) ?></div>
+                        <div class="row" id="Buttons">
+                            <!-- <div class="col-md-2"></div> -->
+                            <div class="col">
+                                <button class="btn btn-outline-info my-3" id="buyButton">Buy Now</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-outline-info my-3" id="cartButton">Add To Cart</button>
+                            </div>
+                            <!-- <div class="col-md-2"></div> -->
+                        </div>
+
                     </div>
-                    <div class="col-2"></div>
                 </div>
-
             </div>
+
         </div>
+        <div class="col-sm-2 col-md-3"></div>
+
     </div>
+
     <?php require_once "script.php" ?>
     <footer id="footer1">
         <?php require_once "footer.php" ?>
