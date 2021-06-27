@@ -43,7 +43,7 @@
         <?php require_once "nav.php" ?>
     </header>
     <br>
-    <!--Author desctiption-->
+    <!--Author dsctiption-->
     <div class="container">
         <div class="row justify-content-center">
             <h2 class="text-center"><?=htmlentities($name)?></h2>
@@ -92,7 +92,7 @@
     <div class="container">
         <div class="row text-center py-5">
             <?php
-            $sql = "SELECT * FROM productb LIMIT 0,8";
+            $sql = "SELECT * FROM productb WHERE product_author='$name'";
             $result = mysqli_query($con, $sql);
             // $result = $database->getData();
             if (mysqli_num_rows($result) > 0) {
@@ -106,7 +106,7 @@
     <!--header3-->
     <div class="container-fluid">
         <div class="header" id="header2">
-            <h5>Top Author</h5>
+            <h5>Top Authors</h5>
         </div>
     </div>
     <div class="container-fluid">

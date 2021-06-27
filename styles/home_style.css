@@ -55,6 +55,7 @@
        #item-grid {
            max-width: 120%;
            max-height: 60%;
+           margin-bottom: 30px;
        }
        
        #item-grid:hover {

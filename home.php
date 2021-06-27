@@ -93,7 +93,7 @@
     <div class="container">
         <div class="row text-center py-5">
             <?php
-            $sql = "SELECT * FROM productb LIMIT 0,4";
+            $sql = "SELECT * FROM productb LIMIT 3,8";
             $result = mysqli_query($con, $sql);
             // $result = $database->getData();
             if (mysqli_num_rows($result) > 0) {
@@ -107,22 +107,7 @@
     </div>
 
 
-    <div class="container">
-        <div class="row text-center py-5">
-            <?php
-            $sql = "SELECT * FROM productb LIMIT 5,4";
-            $result = mysqli_query($con, $sql);
-            // $result = $database->getData();
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    component($row['product_name'], $row['product_price'], $row['second_price'], $row['product_image'], $row['id']);
-                }
-            }
-            
-            ?>
-        </div>
-    </div>
-    
+   
 
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2021 at 07:17 PM
+-- Generation Time: Jun 27, 2021 at 07:39 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -41,8 +41,8 @@ CREATE TABLE `authortb` (
 
 INSERT INTO `authortb` (`id`, `author_name`, `author_since`, `author_image`, `author_description`) VALUES
 (1, 'Becky Albertalli', 2017, './image/author_BA.jpg', 'Becky Albertalli is the author of the acclaimed novels Simon vs. the Homo Sapiens Agenda (film: Love, Simon), The Upside of Unrequited, and Leah on the Offbeat. She is also the co-author of What If It\'s Us with Adam Silvera. A former clinical psychologist who specialized in working with children and teens, Becky lives with her family in Atlanta. You can visit her online at www.beckyalbertalli.com.'),
-(2, 'Maureen Johnson', 2020, './image/author_MJ.jpg', 'Becky Albertalli is the author of the acclaimed novels Simon vs. the Homo Sapiens Agenda (film: Love, Simon), The Upside of Unrequited, and Leah on the Offbeat. She is also the co-author of What If It\'s Us with '),
-(3, 'William W. Johnstone', 1991, './Image/author_WJ.jpg', 'Blood, Guts, and Glory: Smoke Jensen: American Legend (Mountain Man)');
+(2, 'Maureen Johnson', 2020, './image/author_MJ.jpg', 'Maureen Johnson is the New York Times and USA Today bestselling author of several YA novels, including 13 Little Blue Envelopes, Suite Scarlett, The Name of the Star, and Truly Devious. She has also done collaborative works, such as Let It Snow (with John Green and Lauren Myracle), and The Bane Chronicles (with Cassandra Clare and Sarah Rees Brennan). Her work has appeared in publications such as The New York Times, Buzzfeed, and The Guardian, and she has also served as a scriptwriter for EA Games. She has an MFA in Writing from Columbia University and lives in New York City'),
+(3, 'William W. Johnstone', 1991, './Image/author_WJ.jpg', 'William W. Johnstone is the USA Today and New York Times bestselling author of over 300 books, including Preacher, The Last Mountain Man, Luke Jensen Bounty Hunter, Flintlock, Savage Texas, Matt Jensen, The Last Mountain Man; The Family Jensen, Sidewinders, and Shawn O\'Brien Town Tamer . His thrillers include Phoenix Rising, Home Invasion, The Blood of Patriots, The Bleeding Edge, and Suicide Mission. Visit his website at www.williamjohnstone.net or by email at dogcia2006@aol.com.');
 
 --
 -- Indexes for dumped tables

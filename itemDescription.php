@@ -13,6 +13,7 @@ while ($rows = $result->fetch_assoc()) {
     $name = $rows['product_name'];
     $second = $rows['second_price'];
     $dis = $rows['product_description'];
+    $author=$rows['product_author'];
 }
 
 
@@ -49,9 +50,11 @@ while ($rows = $result->fetch_assoc()) {
 
                     <div class="col-md-6 col-sm-6" id="desc">
                         <div id="itemName"> <?= htmlentities($name) ?></div>
+                        <div id="authorName"><b><?= htmlentities($author) ?></b></div>
                         <div id="catogary">Electronic items</div>
                         <div id="itemPrice">$ <?= htmlentities($price) ?> <s class="text-secondary">   $<?= htmlentities($second) ?></s></div>
                         <div id="itemDescription"><?= htmlentities($dis) ?></div>
+                        
                         <div class="row" id="Buttons">
                             <!-- <div class="col-md-2"></div> -->
                             <div class="col">
