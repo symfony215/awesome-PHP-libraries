@@ -1,22 +1,22 @@
 <?php
 
-    $name= $_GET['name'];
-    require_once "home/homeDb.php";
+$name = $_GET['name'];
+require_once "home/homeDb.php";
 
-    $sql = "SELECT * FROM authortb WHERE author_name='$name'";
-    $result = $con->query($sql);
-    $row = $result;
+$sql = "SELECT * FROM authortb WHERE author_name='$name'";
+$result = $con->query($sql);
+$row = $result;
 
-    while ($rows= $result->fetch_assoc()){
-        $since = $rows['author_since'];
-        $name = $rows['author_name'];
-        $image = $rows['author_image'];
-        $dis = $rows['author_description'];
-
-    }
+while ($rows = $result->fetch_assoc()) {
+    $since = $rows['author_since'];
+    $name = $rows['author_name'];
+    $image = $rows['author_image'];
+    $dis = $rows['author_description'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,18 +46,18 @@
     <!--Author dsctiption-->
     <div class="container">
         <div class="row justify-content-center">
-            <h2 class="text-center"><?=htmlentities($name)?></h2>
+            <h2 class="text-center"><?= htmlentities($name) ?></h2>
         </div>
         <div class="row">
             <div class="col-sm-4">
                 <div class="card h-75">
-                    <img src="<?=htmlentities($image)?>" class="img-fluid" alt="books">
+                    <img src="<?= htmlentities($image) ?>" class="img-fluid" alt="books">
                 </div>
             </div>
             <div class="col-sm-8">
-                <div class="card h-75">
+                <div class="card h-75" id="abtcard">
                     <div class="card-body">
-                        <p class="card-text"><?=htmlentities($dis)?></p><br>
+                        <p class="card-text"><?= htmlentities($dis) ?></p><br>
                         <div class="text-center">
                             <button type="button" class="btn btn-outline-info">See more</button>
                         </div>
@@ -68,18 +68,18 @@
     </div>
 
 
-<!--header2-->
+    <!--header2-->
 
-<div class="container">
-            <h4>Other books by the author</h4>
-</div>
+    <div class="container">
+        <h4>Other books by the author</h4>
+    </div>
 
-<div class="container-fluid">
-    <hr>
-</div>
+    <div class="container-fluid">
+        <hr>
+    </div>
 
 
-<!--other books-->
+    <!--other books-->
     <?php
     require_once("./home/homeDb.php");
     require_once("./home/item-component.php");
@@ -97,7 +97,7 @@
             // $result = $database->getData();
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    component($row['product_name'], $row['product_price'], $row['second_price'],$row['product_image'], $row['id']);
+                    component($row['product_name'], $row['product_price'], $row['second_price'], $row['product_image'], $row['id']);
                 }
             }
             ?>
