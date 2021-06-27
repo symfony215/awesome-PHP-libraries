@@ -31,7 +31,7 @@ if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto" id="navbarItems">
                 <a class="nav-link" aria-current="page" href="home.php">Home</a>
-                <a class="nav-link" href="#">Catogaries</a>
+                <a class="nav-link" href="categories.php">Categories</a>
                 <a class="nav-link" href="about.php">About us</a>
                 <a class="nav-link" href="#"><i class="bi bi-cart"> </i></a>
                 <a class="nav-link" href="#"><i class="bi bi-person-circle"> hi <?= htmlentities($_SESSION['username']) ?> </i></a>
@@ -43,7 +43,7 @@ if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
             <div id="myDropdown" class="dropdown-content">
                 <a class="nav-link" id="linknames" href="#"><i class="bi bi-person-circle"> hi <?= htmlentities($_SESSION['username']) ?> </i></a>
                 <a class="nav-link" id="linknames" aria-current="page" href="home.php">Home</a>
-                <a class="nav-link" id="linknames" href="#">Catogaries</a>
+                <a class="nav-link" id="linknames" href="categories.php">Categories</a>
                 <a class="nav-link" id="linknames" href="#">About us</a>
                 <a class="nav-link" id="linknames" href="#"><i class="bi bi-cart"> </i></a>
             </div>

@@ -26,43 +26,42 @@
 
 
     <!--slide show-->
-    <div class="container-fluid">
-        <div id="slide-show" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#slide-show" data-slide-to="0" class="active"></li>
-                <li data-target="#slide-show" data-slide-to="1"></li>
-                <li data-target="#slide-show" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active" id="slide_img">
-                    <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
-                    <div id="slide-show-btn" class="carousel-caption d d-md">
-                        <button type="button" class="btn btn-outline-info">See more</button>
-                    </div>
-                </div>
-                <div class="carousel-item" id="slide_img">
-                    <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
-                    <div id="slide-show-btn" class="carousel-caption d d-md">
-                        <button type="button" class="btn btn-secondary">See more</button>
-                    </div>
-                </div>
-                <div class="carousel-item" id="slide_img">
-                    <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
-                    <div id="slide-show-btn" class="carousel-caption d d-md">
-                        <button type="button" class="btn btn-secondary">See more</button>
-                    </div>
+    <div id="slide-show" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#slide-show" data-slide-to="0" class="active"></li>
+            <li data-target="#slide-show" data-slide-to="1"></li>
+            <li data-target="#slide-show" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" id="slide_img">
+                <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
+                <div id="slide-show-btn" class="carousel-caption d d-md">
+                    <button type="button" class="btn btn-outline-info">See more</button>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#slide-show" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#slide-show" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="carousel-item" id="slide_img">
+                <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
+                <div id="slide-show-btn" class="carousel-caption d d-md">
+                    <button type="button" class="btn btn-secondary">See more</button>
+                </div>
+            </div>
+            <div class="carousel-item" id="slide_img">
+                <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
+                <div id="slide-show-btn" class="carousel-caption d d-md">
+                    <button type="button" class="btn btn-secondary">See more</button>
+                </div>
+            </div>
         </div>
+        <a class="carousel-control-prev" href="#slide-show" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slide-show" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
+
 
     <br>
     <br>
@@ -76,7 +75,7 @@
     <div class="container-fluid">
         <hr>
     </div>
-    
+
 
     <!--top selling item-->
     <?php
@@ -101,13 +100,13 @@
                     component($row['product_name'], $row['product_price'], $row['second_price'], $row['product_image'], $row['id']);
                 }
             }
-            
+
             ?>
         </div>
     </div>
 
 
-   
+
 
 
 

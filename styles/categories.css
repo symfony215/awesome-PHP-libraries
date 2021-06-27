@@ -1,0 +1,42 @@
+#image-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+  }
+
+.card{
+    margin-bottom: 20px;
+}
+#crd{
+    margin-bottom: 20px;
+}
+
+#cat-name{
+    margin-top: auto;
+    /* margin-bottom: 10px; */
+}
+#cntner{
+
+    margin-top: 15px;
+}
+#cate-name{
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+#crd-name{
+    color: black;
+}
+#crd-name:hover{
+    text-decoration: none;
+}
+
+@media(min-width:536px){
+    
+    #cate-name{
+        font-size: 28px;
+    }
+}
