@@ -13,7 +13,8 @@ while ($rows = $result->fetch_assoc()) {
     $name = $rows['product_name'];
     $second = $rows['second_price'];
     $dis = $rows['product_description'];
-    $author=$rows['product_author'];
+    $author = $rows['product_author'];
+    $category = $rows['product_category'];
 }
 
 
@@ -24,10 +25,11 @@ while ($rows = $result->fetch_assoc()) {
 <html lang="en">
 
 <head>
-    <title>Item Description</title>
+    <title><?= htmlentities($name) ?></title>
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/description.css" />
+    <link rel="stylesheet" href="./styles/home_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <?php require_once "head.php" ?>
 </head>
@@ -51,10 +53,10 @@ while ($rows = $result->fetch_assoc()) {
                     <div class="col-md-6 col-sm-6" id="desc">
                         <div id="itemName"> <?= htmlentities($name) ?></div>
                         <div id="authorName"><b><?= htmlentities($author) ?></b></div>
-                        <div id="catogary">Electronic items</div>
-                        <div id="itemPrice">$ <?= htmlentities($price) ?> <s class="text-secondary">   $<?= htmlentities($second) ?></s></div>
+                        <div id="category"><?= htmlentities($category) ?></div>
+                        <div id="itemPrice">$ <?= htmlentities($price) ?> <s class="text-secondary"> $<?= htmlentities($second) ?></s></div>
                         <div id="itemDescription"><?= htmlentities($dis) ?></div>
-                        
+
                         <div class="row" id="Buttons">
                             <!-- <div class="col-md-2"></div> -->
                             <div class="col">
@@ -73,6 +75,34 @@ while ($rows = $result->fetch_assoc()) {
         </div>
         <div class="col-sm-2 col-md-3"></div>
 
+    </div>
+
+    <div>
+        <p>
+        <h4 id="author-name">More from <?= htmlentities($author) ?></h4>
+        </p>
+    </div>
+
+    <?php
+    require_once("./home/homeDb.php");
+    require_once("./home/item-component.php");
+
+    ?>
+
+    <div class="container">
+        <div class="row text-center py-5">
+            <?php
+            $sql = "SELECT * FROM productb where product_author='$author' LIMIT 2,4";
+            $result = mysqli_query($con, $sql);
+            // $result = $database->getData();
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    component($row['product_name'], $row['product_price'], $row['second_price'], $row['product_image'], $row['id']);
+                }
+            }
+
+            ?>
+        </div>
     </div>
 
     <?php require_once "script.php" ?>
