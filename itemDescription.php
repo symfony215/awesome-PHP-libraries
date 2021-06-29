@@ -13,7 +13,8 @@ while ($rows = $result->fetch_assoc()) {
     $name = $rows['product_name'];
     $second = $rows['second_price'];
     $dis = $rows['product_description'];
-    $author=$rows['product_author'];
+    $author = $rows['product_author'];
+    $category = $rows['product_category'];
 }
 
 
@@ -24,7 +25,7 @@ while ($rows = $result->fetch_assoc()) {
 <html lang="en">
 
 <head>
-    <title>Item Description</title>
+    <title><?= htmlentities($name) ?></title>
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/description.css" />
@@ -38,24 +39,24 @@ while ($rows = $result->fetch_assoc()) {
     <?php require_once "nav.php" ?>
     <div class="row">
 
-        <div class="col-sm-2 col-md-3"></div>
-        <div class="col-sm-8 col-md-6">
+        <div class="col-xs-1 col-sm-2 col-md-2"></div>
+        <div class="col-xs-10 col-sm-8 col-md-8">
 
             <div class="container" id="itemCard">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6" id="product-img" style=" width:100%; height:100%">
+                <div class="row ">
+                    <div class="col-md-6 col-sm-6" id="product-img">
 
-                        <img src="<?= htmlentities($image) ?>" alt="product">
+                        <img class="image-fluid" src="<?= htmlentities($image) ?>" alt="product">
                     </div>
 
 
                     <div class="col-md-6 col-sm-6" id="desc">
                         <div id="itemName"> <?= htmlentities($name) ?></div>
                         <div id="authorName"><b><?= htmlentities($author) ?></b></div>
-                        <div id="catogary">Electronic items</div>
-                        <div id="itemPrice">$ <?= htmlentities($price) ?> <s class="text-secondary">   $<?= htmlentities($second) ?></s></div>
+                        <div id="category"><?= htmlentities($category) ?></div>
+                        <div id="itemPrice">$ <?= htmlentities($price) ?> <s class="text-secondary"> $<?= htmlentities($second) ?></s></div>
                         <div id="itemDescription"><?= htmlentities($dis) ?></div>
-                        
+
                         <div class="row" id="Buttons">
                             <!-- <div class="col-md-2"></div> -->
                             <div class="col">
@@ -72,92 +73,54 @@ while ($rows = $result->fetch_assoc()) {
             </div>
 
         </div>
-        <div class="col-sm-2 col-md-3"></div>
-    <!--header2-->
+        <div class="col-xs-1 col-sm-2 col-md-2"></div>
+        <!--header2-->
 
-    <div class="container">
-        <h4>Top selling by <?= htmlentities($author) ?></h4>
-    </div>
+        <div class="container">
+            <h4>Top selling by <?= htmlentities($author) ?></h4>
+        </div>
 
-    <div class="container-fluid">
-        <hr>
-    </div>
+        <div class="container-fluid">
+            <hr>
+        </div>
 
 
-    <!--other books-->
-    <?php
-    require_once("./home/homeDb.php");
-    require_once("./home/item-component.php");
+        <!--other books-->
+        <?php
+        require_once("./home/homeDb.php");
+        require_once("./home/item-component.php");
 
-    //Create instance of createdb class
-    // $database=new CreateDb("Productdb", "productb");
+        //Create instance of createdb class
+        // $database=new CreateDb("Productdb", "productb");
 
-    ?>
+        ?>
 
-    <div class="container">
-        <div class="row text-center py-5">
-            <?php
-            $sql = "SELECT * FROM productb WHERE product_author='$author' LIMIT 2,4";
-            $result = mysqli_query($con, $sql);
-            // $result = $database->getData();
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    component($row['product_name'], $row['product_price'], $row['second_price'], $row['product_image'], $row['id']);
+        <div class="container">
+            <div class="row text-center py-5">
+                <?php
+                $sql = "SELECT * FROM productb WHERE product_author='$author' LIMIT 2,4";
+                $result = mysqli_query($con, $sql);
+                // $result = $database->getData();
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        component($row['product_name'], $row['product_price'], $row['second_price'], $row['product_image'], $row['id']);
+                    }
                 }
-            }
-            ?>
+                ?>
+            </div>
         </div>
-    </div>
-    <br>
-    <br>
-
-    <!--header1-->
-    <div class="container-fluid">
-        <div class="header" id="header1">
-            <h5>Top selling</h5>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <hr>
-    </div>
-
-
-    <!--top selling item-->
-    <?php
-    require_once("./home/homeDb.php");
-    require_once("./home/item-component.php");
-
-    //Create instance of createdb class
-    // $database=new CreateDb("Productdb", "productb");
-
-    ?>
-
-
-
-    <div class="container">
-        <div class="row text-center py-5">
-            <?php
-            $sql = "SELECT * FROM productb LIMIT 3,8";
-            $result = mysqli_query($con, $sql);
-            // $result = $database->getData();
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    component($row['product_name'], $row['product_price'], $row['second_price'], $row['product_image'], $row['id']);
-                }
-            }
-
-            ?>
-        </div>
-    </div>
+        <br>
+        <br>
 
 
     </div>
+
 
     <?php require_once "script.php" ?>
     <!--<footer id="footer1">-->
-        <?php require_once "footer.php" ?>
+    <?php require_once "footer.php" ?>
     <!--</footer>-->
-    
+
 
 </body>
 

@@ -59,6 +59,11 @@ body{
     margin: auto;
 }
 
+#authorName{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 @media(max-width:576px){
 
     #buyButton{
@@ -75,9 +80,9 @@ body{
 }
 
 @media(min-width:576px){
-    #footer1{
+    /* #footer1{
         position:absolute;
         bottom: 0;
         width: 100%;
-    }
+    } */
 }
