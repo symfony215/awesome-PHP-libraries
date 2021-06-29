@@ -59,8 +59,9 @@ body{
     margin: auto;
 }
 
-#author-name{
-    padding-left: 20px;
+#authorName{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 @media(max-width:576px){

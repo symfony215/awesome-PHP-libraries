@@ -39,14 +39,14 @@ while ($rows = $result->fetch_assoc()) {
     <?php require_once "nav.php" ?>
     <div class="row">
 
-        <div class="col-sm-2 col-md-3"></div>
-        <div class="col-sm-8 col-md-6">
+        <div class="col-xs-1 col-sm-2 col-md-2"></div>
+        <div class="col-xs-10 col-sm-8 col-md-8">
 
             <div class="container" id="itemCard">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6" id="product-img" style=" width:100%; height:100%">
+                <div class="row ">
+                    <div class="col-md-6 col-sm-6" id="product-img">
 
-                        <img src="<?= htmlentities($image) ?>" alt="product">
+                        <img class="image-fluid" src="<?= htmlentities($image) ?>" alt="product">
                     </div>
 
 
@@ -73,7 +73,7 @@ while ($rows = $result->fetch_assoc()) {
             </div>
 
         </div>
-        <div class="col-sm-2 col-md-3"></div>
+        <div class="col-xs-1 col-sm-2 col-md-2"></div>
         <!--header2-->
 
         <div class="container">
