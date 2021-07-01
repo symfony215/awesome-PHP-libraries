@@ -1,10 +1,22 @@
+<?php
+
+session_start();
+if (isset($_GET['name'])) {
+    $_SESSION['cat'] = $_GET['name'];
+} else {
+    $categoryName = $_SESSION['cat'];
+}
+$categoryName = $_SESSION['cat'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title><?= htmlentities($categoryName) ?></title>
 
 
     <!--font awsome-->
@@ -23,18 +35,6 @@
 
 
     <?php require_once "nav.php" ?>
-    <?php
-    if (isset($_GET['name'])) {
-        $_SESSION['cat'] = $_GET['name'];
-    } else {
-        $categoryName = $_SESSION['cat'];
-    }
-    $categoryName = $_SESSION['cat'];
-
-
-
-
-    ?>
 
 
     <?php
@@ -80,8 +80,8 @@
                 for ($page = 1; $page <= $number_of_page; ++$page) {
 
 
-                    echo ('<button class="btn btn-outline-info my-3" id="pages"><a href = "cat-items.php?page=' . $page . '">
-                        ' . $page . ' </a></button>');
+                    echo ('<a href = "cat-items.php?page=' . $page . '"><button class="btn btn-outline-info my-3" id="pages">
+                        ' . $page . '</button> </a>');
                 }
             }
             ?>
