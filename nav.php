@@ -1,7 +1,6 @@
 <?php
 $count = 1;
 if ($count = 1) {
-    session_start();
     $_SESSION['loggedin'] = true;
     $_SESSION['username'] = "Aravinda";
 }
@@ -13,6 +12,7 @@ if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
 
     $loginStatus = false;
 }
+$userName = $_SESSION['username'];
 
 ?>
 
@@ -34,14 +34,30 @@ if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
                 <a class="nav-link" href="categories.php">Categories</a>
                 <a class="nav-link" href="about.php">About us</a>
                 <a class="nav-link" href="#"><i class="bi bi-cart"> </i></a>
-                <a class="nav-link" href="#"><i class="bi bi-person-circle"> hi <?= htmlentities($_SESSION['username']) ?> </i></a>
+
+
+                <?php
+                if ($loginStatus == true) {
+                    echo ("<a class=\"nav-link\" href=\"user.php\"><i class=\"bi bi-person-circle\"> hi $userName</i></a>");
+                } else {
+                    echo ("<a class=\"nav-link\" href=\"login.php\"><i class=\"bi bi-person-circle\"> Log in / sign up</i></a>");
+                }
+                ?>
+
+
 
             </div>
         </div>
         <div class="dropdown d-md-none">
             <button onclick="myFunction()" class="dropbtn bi bi-list"></button>
             <div id="myDropdown" class="dropdown-content">
-                <a class="nav-link" id="linknames" href="#"><i class="bi bi-person-circle"> hi <?= htmlentities($_SESSION['username']) ?> </i></a>
+                <?php
+                if ($loginStatus == true) {
+                    echo ("<a class=\"nav-link\" href=\"user.php\"><i class=\"bi bi-person-circle\"> hi $userName</i></a>");
+                } else {
+                    echo ("<a class=\"nav-link\" href=\"login.php\"><i class=\"bi bi-person-circle\"> Log in / sign up</i></a>");
+                }
+                ?>
                 <a class="nav-link" id="linknames" aria-current="page" href="home.php">Home</a>
                 <a class="nav-link" id="linknames" href="categories.php">Categories</a>
                 <a class="nav-link" id="linknames" href="#">About us</a>
