@@ -67,14 +67,17 @@
        }
        
        #img {
-           max-width: 200%;
+           /* max-width: 200%;
            max-height: 50%;
-           transition: transform 0.5s ease;
+           transition: transform 0.5s ease; */
+           width: 100%; /* or any custom size */
+           height: 100%; 
+           object-fit: contain;
        }
        
-       #img:hover {
+       /* #img:hover {
            transform: scale(1.1);
-       }
+       } */
        /*header2*/
        
        #header2 {
