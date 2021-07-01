@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/home_style.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/cat-items.css" />
     <?php require_once "head.php" ?>
 
 </head>
@@ -72,18 +73,18 @@
 
             ?>
         </div>
-        <div class="row">
-            <button clss="btn btn-outline-info my-3">
-                <?php
-                if ($number_of_page > 1) {
-                    for ($page = 1; $page <= $number_of_page; $page++) {
+        <div class="row justify-content-center">
+
+            <?php
+            if ($number_of_page > 1) {
+                for ($page = 1; $page <= $number_of_page; ++$page) {
 
 
-                        echo ('<a href = "cat-items.php?page=' . $page . '">' . $page . ' </a>');
-                    }
+                    echo ('<button class="btn btn-outline-info my-3" id="pages"><a href = "cat-items.php?page=' . $page . '">
+                        ' . $page . ' </a></button>');
                 }
-                ?>
-            </button>
+            }
+            ?>
         </div>
     </div>
 
