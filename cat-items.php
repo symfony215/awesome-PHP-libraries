@@ -25,6 +25,7 @@ $categoryName = $_SESSION['cat'];
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/cat-items.css" />
+    <link rel="icon" type="image/ico" href="./Image/logo.ico">
     <?php require_once "head.php" ?>
 
 </head>

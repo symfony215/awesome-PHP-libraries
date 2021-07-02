@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/home_style.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="icon" type="image/ico" href="./Image/logo.ico">
     <?php require_once "head.php" ?>
 
 </head>

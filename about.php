@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/about.css">
+    <link rel="icon" type="image/ico" href="./Image/logo.ico">
     <?php require_once "head.php" ?>
 
 </head>
@@ -38,7 +39,7 @@
                             <h5 class="card-title">Best online book store is our</h5>
                             <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believableThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable. Quaerat provident commodi consectetur veniam similique ad
                                 earum omnis ipsum saepe, voluptas, hic voluptates pariatur.</p>
-                            <a href="#" class="btn btn-default">Read more</a>
+                            <a href="#" class="btn btn-outline-info my-3">Read more</a>
                         </div>
                     </div>
                 </div>
