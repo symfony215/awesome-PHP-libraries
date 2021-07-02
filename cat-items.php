@@ -50,7 +50,7 @@ $categoryName = $_SESSION['cat'];
         <div class="row text-center py-5">
             <?php
             $results_per_page = 8;
-            $sql = "SELECT * FROM productb where product_category='$categoryName'";
+            $sql = "SELECT * FROM productb where FIND_IN_SET('$categoryName',product_category)";
             $results = mysqli_query($con, $sql);
             $number_of_result = mysqli_num_rows($results);
             $number_of_page = ceil($number_of_result / $results_per_page);
@@ -63,7 +63,7 @@ $categoryName = $_SESSION['cat'];
             }
             $page_first_result = ($page - 1) * $results_per_page;
 
-            $query = "SELECT *FROM productb where product_category='$categoryName' LIMIT " . $page_first_result . ',' . $results_per_page;
+            $query = "SELECT *FROM productb where FIND_IN_SET('$categoryName',product_category) LIMIT " . $page_first_result . ',' . $results_per_page;
             $result = mysqli_query($con, $query);
 
             if (mysqli_num_rows($result) > 0) {
