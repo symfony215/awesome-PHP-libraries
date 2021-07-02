@@ -26,6 +26,7 @@ while ($rows = $result->fetch_assoc()) {
 
 <head>
     <title><?= htmlentities($name) ?></title>
+    <link rel="icon" type="image/ico" href="./Image/logo.ico">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/description.css" />
