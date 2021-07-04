@@ -33,7 +33,7 @@ $userName = $_SESSION['username'];
                 <a class="nav-link" aria-current="page" href="home.php">Home</a>
                 <a class="nav-link" href="categories.php">Categories</a>
                 <a class="nav-link" href="about.php">About us</a>
-                <a class="nav-link" href="#"><i class="bi bi-cart"> </i></a>
+                <a class="nav-link" href="cart.php"><i class="bi bi-cart"> </i></a>
 
 
                 <?php

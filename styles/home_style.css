@@ -47,7 +47,7 @@
        /*header1*/
        
        #header1 {
-           color: rgb(3, 3, 3);
+           color: rgb(14, 13, 13);
            padding-left: 50px;
        }
        /*top selling item*/
@@ -67,17 +67,17 @@
        }
        
        #img {
-           /* max-width: 200%;
+           max-width: 200%;
            max-height: 50%;
-           transition: transform 0.5s ease; */
-           width: 100%; /* or any custom size */
-           height: 100%; 
+           transition: transform 0.5s ease;
+           width: 100%;
+           height: 100%;
            object-fit: contain;
        }
        
-       /* #img:hover {
+       #img:hover {
            transform: scale(1.1);
-       } */
+       }
        /*header2*/
        
        #header2 {
@@ -98,7 +98,6 @@
        #author card {
            border-radius: 0px;
            box-shadow: 5px 5px 15px #6c757d;
-           ;
            transition: all 0.3s ease-in;
            -webkit-transition: all 0.3s ease-in;
            -moz-transition: all 0.3s ease-in;
