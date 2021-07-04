@@ -33,14 +33,18 @@ $userName = $_SESSION['username'];
                 <a class="nav-link" aria-current="page" href="home.php">Home</a>
                 <a class="nav-link" href="categories.php">Categories</a>
                 <a class="nav-link" href="about.php">About us</a>
-                <a class="nav-link" href="#"><i class="bi bi-cart"> </i></a>
 
 
                 <?php
+
                 if ($loginStatus == true) {
-                    echo ("<a class=\"nav-link\" href=\"user.php\"><i class=\"bi bi-person-circle\"> hi $userName</i></a>");
+                    echo ("
+                    <a class=\"nav-link\" href=\"cart.php\"><i id=\"cartIco\" class=\"bi bi-cart has-badge\"><span class=\"badge\">3</span></i></a>
+                    <a class=\"nav-link\" href=\"user.php\"><i class=\"bi bi-person-circle \"> hi $userName</i></a>");
                 } else {
-                    echo ("<a class=\"nav-link\" href=\"login.php\"><i class=\"bi bi-person-circle\"> Log in / sign up</i></a>");
+                    echo ("
+                    <a class=\"nav-link\" href=\"login.php\"><i id=\"cartIco\" class=\"bi bi-cart has-badge\"></i></a>
+                    <a class=\"nav-link\" href=\"login.php\"><i class=\"bi bi-person-circle\"> Log in / sign up</i></a>");
                 }
                 ?>
 
@@ -52,16 +56,22 @@ $userName = $_SESSION['username'];
             <button onclick="myFunction()" class="dropbtn bi bi-list"></button>
             <div id="myDropdown" class="dropdown-content">
                 <?php
+
                 if ($loginStatus == true) {
-                    echo ("<a class=\"nav-link\" href=\"user.php\"><i class=\"bi bi-person-circle\"> hi $userName</i></a>");
+                    echo ("
+    <a class=\"nav-link\" href=\"user.php\"><i class=\"bi bi-person-circle \"> hi $userName</i></a>
+    <a class=\"nav-link\" href=\"cart.php\"><i id=\"cartIco\" class=\"bi bi-cart has-badge\"><span class=\"badge\">3</span></i></a>
+    ");
                 } else {
-                    echo ("<a class=\"nav-link\" href=\"login.php\"><i class=\"bi bi-person-circle\"> Log in / sign up</i></a>");
+                    echo ("
+                <a class=\"nav-link\" href=\"login.php\"><i class=\"bi bi-person-circle\"> Log in / sign up</i></a>
+                <a class=\"nav-link\" href=\"login.php\"><i id=\"cartIco\" class=\"bi bi-cart has-badge\"></i></a>
+                ");
                 }
                 ?>
                 <a class="nav-link" id="linknames" aria-current="page" href="home.php">Home</a>
                 <a class="nav-link" id="linknames" href="categories.php">Categories</a>
                 <a class="nav-link" id="linknames" href="#">About us</a>
-                <a class="nav-link" id="linknames" href="#"><i class="bi bi-cart"> </i></a>
             </div>
         </div>
     </div>
