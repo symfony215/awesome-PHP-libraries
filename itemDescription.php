@@ -76,14 +76,15 @@ while ($rows = $result->fetch_assoc()) {
         </div>
         <div class="col-xs-1 col-sm-2 col-md-2"></div>
         <!--header2-->
+        <div class="container-fluid">
+            <hr>
+        </div>
 
         <div class="container">
             <h4>Top selling by <?= htmlentities($author) ?></h4>
         </div>
 
-        <div class="container-fluid">
-            <hr>
-        </div>
+
 
 
         <!--other books-->
