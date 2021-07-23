@@ -3,6 +3,7 @@ $count = 1;
 if ($count = 1) {
     $_SESSION['loggedin'] = true;
     $_SESSION['username'] = "Aravinda";
+    $numItmes = count($_SESSION['cart']);
 }
 $loginStatus = false;
 if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
@@ -39,7 +40,7 @@ $userName = $_SESSION['username'];
 
                 if ($loginStatus == true) {
                     echo ("
-                    <a class=\"nav-link\" href=\"cart.php\"><i id=\"cartIco\" class=\"bi bi-cart has-badge\"><span class=\"badge\">3</span></i></a>
+                    <a class=\"nav-link\" href=\"cart.php\"><i id=\"cartIco\" class=\"bi bi-cart has-badge\"><span class=\"badge\">$numItmes</span></i></a>
                     <a class=\"nav-link\" href=\"user.php\"><i class=\"bi bi-person-circle \"> hi $userName</i></a>");
                 } else {
                     echo ("
