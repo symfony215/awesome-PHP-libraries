@@ -83,7 +83,7 @@ if (mysqli_num_rows($result) > 0) {
 
                 </div>
             </div>
-            <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25">
+            <div id="cartBox" class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25">
 
                 <div class="pt-4">
                     <h6>PRICE DETAILS</h6>
@@ -93,6 +93,7 @@ if (mysqli_num_rows($result) > 0) {
                             <?php
                             if (isset($_SESSION['cart'])) {
                                 $count  = count($_SESSION['cart']);
+                                $_SESSION['count'] = $count;
                                 echo "<h6>Price ($count items)</h6>";
                             } else {
                                 echo "<h6>Price (0 items)</h6>";
