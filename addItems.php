@@ -1,8 +1,3 @@
-<?php
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,14 +25,14 @@
             <div class="col-md-2"></div>
             <div class="card col-md-8">
                 <h2 id="header">Add a New Book</h2>
-                <form method="post" id="frm">
+                <form method="post" id="frm" enctype="multipart/form-data">
                     <table class="center">
                         <tr>
                             <td>
                                 <label>Book Name</label>
                             </td>
                             <td>
-                                <input type="text" required /><br />
+                                <input type="text" name="bName" required /><br />
                             </td>
                         </tr>
                         <tr>
@@ -45,19 +40,19 @@
                                 <label>Author</label>
                             </td>
                             <td>
-                                <input type="text" required /><br>
+                                <input type="text" name="author" required /><br>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <lebel>Book Description</lebel>
                             </td>
-                            <td><input type="text" required /></td>
+                            <td><input type="text" name="description" required /></td>
                         </tr>
                         <tr>
                             <td><label>Price</label></td>
                             <td>
-                                <input type="number" required />$
+                                <input type="number" name="price" required />$
                             </td>
                         </tr>
                         <tr>
@@ -76,7 +71,7 @@
                         </tr>
                         <tr>
                             <td><label>Book Cover</label></td>
-                            <td><input type="file" accept="image/*" required></td>
+                            <td><input type="file" name="bimage" required></td>
                         </tr>
                         <tr>
                             <td id="subbut" colspan="2">
@@ -100,3 +95,30 @@
 </body>
 
 </html>
+
+<?php
+require_once "./home/homeDb.php";
+
+echo ($_POST['bName']);
+echo ($_POST['categories']);
+echo ($_POST['bimage']);
+
+$bookName = $_POST['bName'];
+$author = $_POST['author'];
+$desc = $_POST['description'];
+$cat = $_POST['categories'];
+$price = $_POST['price'];
+$image = $_POST['bimage'];
+$image2 = $_FILES['bimage']['name'];
+$sprice = $price - 2;
+
+$folder = "/xampp/htdocs/php_project/image/";
+
+move_uploaded_file($_FILES[' bimage ']['tmp_name '], "$folder" . $_FILES[' bimage '][' name ']);
+
+$sql = "INSERT INTO productb (product_name,product_price,second_price,product_image,product_description,product_author,product_category) 
+VALUES ('$bookName','$price','$sprice','$image','$desc','$author','$cat')";
+
+$result = mysqli_query($con, $sql);
+
+?>
