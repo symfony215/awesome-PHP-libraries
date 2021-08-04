@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2021 at 09:40 AM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.3.12
+-- Generation Time: Aug 03, 2021 at 05:22 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -29,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `productb` (
-  `id` int(2) DEFAULT NULL,
+  `id` int(2) NOT NULL,
   `product_name` varchar(25) DEFAULT NULL,
   `product_price` decimal(4,2) DEFAULT NULL,
   `second_price` decimal(3,1) DEFAULT NULL,
@@ -62,15 +61,15 @@ INSERT INTO `productb` (`id`, `product_name`, `product_price`, `second_price`, `
 (16, 'Yes No Maybe So', '17.88', '20.0', 'Image/Yes No Maybe So.jpg', 'A book about the power of love and resistance from New York Times bestselling authors Becky Albertalli and Aisha Saeed.', 'Becky Albertalli', 'Comic'),
 (17, 'The Box in the Woods', '15.18', '17.0', 'Image/The Box in the Woods.jpg', 'After solving the case of Truly Devious, Stevie Bell investigates her first mystery outside of Ellingham Academy in this spine-chilling and hilarious stand-alone mystery from New York Times bestselling author Maureen Johnson.', 'Maureen Johnson', 'Fantacy,Fiction'),
 (18, 'Truly Devious', '14.69', '16.5', 'Image/truly devious.jpg', 'New York Times bestselling author Maureen Johnson weaves a delicate tale of murder and mystery in the first book of a striking new series, perfect for fans of Agatha Christie and E. Lockhart.', 'Maureen Johnson', 'Fantacy'),
-(19, 'The Vanishing Stair ', '12.76', '15.0', 'Image/The Vanishing Stair.jpg', 'In New York Times bestselling author Maureen Johnson’s second novel in the Truly Devious series, there are more twists and turns than Stevie Bell can imagine. No answer is given freely, and someone will pay for the truth with their life.', 'Maureen Johnson', 'Fantacy,Fiction,Comic'),
+(19, 'The Vanishing Stair ', '12.76', '15.0', 'Image/The Vanishing Stair.jpg', 'In New York Times bestselling author Maureen Johnson’s second novel in the Truly Devious series, there are more twists and turns than Stevie Bell can imagine. No answer is given freely, and someone will pay for the truth with their life.', 'Maureen Johnson', 'Fantacy,Fiction,'),
 (20, 'Hand on the Wall', '10.03', '12.0', 'Image/The hand on the wall.jpg', 'New York Times bestselling author Maureen Johnson delivers the witty and pulse-pounding conclusion to the Truly Devious series as Stevie Bell solves the mystery that has haunted Ellingham Academy for over 75 years.', 'Maureen Johnson', 'Fantacy,Thriller'),
 (21, 'Hello, Cruel Heart', '10.99', '12.0', 'Image/Hello, Cruel Heart.jpg', 'An electric new story of teenage Cruella de Vil in an original novel inspired by the upcoming Walt Disney Studios Live Action Film, Cruella.', 'Maureen Johnson', 'Fantacy'),
 (22, 'The Shadow Cabinet', '11.23', '14.0', 'Image/The Shadow Cabinet.jpg', 'Time is running out as Rory fights to find her friends and the ghost squad struggles to stop Jane from unleashing her spectral nightmare on the entire city. In the process, they’ll discover the existence of an organization that underpins London itself—and Rory will learn that someone she trusts has been keeping a tremendous secret.', 'Maureen Johnson', 'Fantacy,Love'),
 (23, '13 Little Blue Envelopes', '12.99', '15.0', 'Image/13 Little Blue Envelopes.jpg', 'Ginny Blackstone never thought she’d spend her summer vacation backpacking across Europe. But that was before she received the first little blue envelope from Aunt Peg.', 'Maureen Johnson', 'Fantacy,Thriller'),
 (24, 'The Madness Underneath', '20.00', '22.0', 'Image/The madness underneath.jpg', 'There’s a creepy new terror haunting modern-day London. Fresh from defeating a Jack the Ripper killer, Rory must put her new-found hunting skills to the test before all hell breaks loose…', 'Maureen Johnson', 'Fantacy,Art'),
-(25, 'Blood Guts and Glory', '13.44', '15.0', 'Image/Blood, Guts, and Glory,.jpg', 'One of the greatest characters in Western fiction. Two of the wildest tales of frontier vengeance from William Johnstone’s classic bestselling saga. This is how Smoke Jensen became a legend.', 'William W. Johnstone', 'Fiction,Fantacy,Humor'),
+(25, 'Blood Guts and Glory', '13.44', '15.0', 'Image/Blood, Guts, and Glory,.jpg', 'One of the greatest characters in Western fiction. Two of the wildest tales of frontier vengeance from William Johnstone’s classic bestselling saga. This is how Smoke Jensen became a legend.', 'William W. Johnstone', 'Fiction,Fantacy,'),
 (26, 'Red River Vengeance', '22.78', '25.0', 'Image/Red River Vengeance.jpg', 'A good man like Perley Gates knows that when you race with the devil, you’d better cross the finish line first—or you won’t finish at all . . .', 'William W. Johnstone', 'Fiction,Art,Love'),
-(27, 'North of Laramie', '21.45', '23.0', 'Image/North of Laramie.jpg', 'The bestselling Johnstones kick off their blazing new western series with a real bang—a fatal, fateful shootout that sends a man named Buck Trammel on the ride of his life . . .', 'William W. Johnstone', 'Fiction,Fantacy,Humor'),
+(27, 'North of Laramie', '21.45', '23.0', 'Image/North of Laramie.jpg', 'The bestselling Johnstones kick off their blazing new western series with a real bang—a fatal, fateful shootout that sends a man named Buck Trammel on the ride of his life . . .', 'William W. Johnstone', 'Fiction,Fantacy,'),
 (28, 'The Kerrigans', '10.87', '13.0', 'Image/The Kerrigans.jpg', 'A compelling saga of a family\'s struggle to build an empire on the frontier, from the USA Today bestselling authors of The Family Jensen.', 'William W. Johnstone', 'Fiction'),
 (29, 'Trail of the Mountain Man', '16.77', '18.0', 'Image/Trail of the Mountain Man.jpg', 'Criminals draw the wrath of a retired gunfighter after shooting his wife in this western by a USA Today–bestselling author of War of the Mountain Man.Criminals draw the wrath of a retired gunfighter after shooting his wife in this western by a USA Today–bestselling author of War of the Mountain Man.', 'William W. Johnstone', 'Fiction,Love'),
 (30, 'Out of the Ashes', '40.80', '42.0', 'Image/Out of the Ashes.jpg', 'In this western by the bestselling author of Return of the Mountain Man, legendary gunslingers unite to save a beleaguered mining town.', 'William W. Johnstone', 'Fiction,Humor'),
@@ -83,7 +82,7 @@ INSERT INTO `productb` (`id`, `product_name`, `product_price`, `second_price`, `
 (37, 'THE VEGETARIAN DIABETIC A', '9.01', '15.0', 'Image/THE VEGETARIAN DIABETIC AND LOSE BELLY FAT COOKBOOK FOR BEGINNERS.jpg', 'This Complete 2 In 1Vegetarian Diabetic Cookbook and Lose Belly Weight is the perfect guide to diabetes and flat tummy you?ve been waiting for!', 'Becky Albertalli', 'Health'),
 (38, 'Fix Your Fatty Liver Book', '43.33', '50.0', 'Image/Fix Your Fatty Liver Book.jpg?', 'FixInclusive Guide on How to Resourcefully Treat Fatty Liver Disease; the Main Causes, Signs, Therapy, Serving of Foods to Devour, Etc.', 'Becky Albertalli', 'Health'),
 (39, 'Fast. Feast. Repeat', '22.78', '25.0', 'Image/Fast. Feast. Repeat.jpg', 'Change?when?you eat and change your body, your health, and your life!', 'Becky Albertalli', 'Health'),
-(40, 'The 10-Day Belly Slimdown', '21.45', '25.0', 'Image/The 10-Day Belly Slimdown.jp', 'The best gift you can give yourself is a slim, beautiful, healthy belly?and in this book, Dr. Kellyann, an expert I trust, tells you exactly how to get it.', 'Becky Albertalli', 'Health'),
+(40, 'The 10-Day Belly Slimdown', '21.45', '25.0', 'Image/The 10-Day Belly Slimdown.jpg', 'The best gift you can give yourself is a slim, beautiful, healthy belly?and in this book, Dr. Kellyann, an expert I trust, tells you exactly how to get it.', 'Becky Albertalli', 'Health'),
 (41, 'The 7-Day Bone Broth Diet', '10.87', '15.0', 'Image/The 7-Day Bone Broth Diet Plan.jpg', 'From Bison Bone Broth to Bone Broth Burgers and Paleo Pork Ramen,?The 7-Day Bone Broth Diet Plan?serves up a straightforward weight-loss program that you can start and stick to.', 'Maureen Johnson', 'Health'),
 (42, 'Atomic Habits', '16.77', '20.0', 'Image/Atomic Habits.jpg', 'No matter your goals,?Atomic Habits?offers a proven framework for improving - every day. James Clear, one of the world\'s leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.', 'Maureen Johnson', 'Health'),
 (43, 'How Not to Die', '23.77', '30.0', 'Image/How Not to Die.jpg', 'The international bestseller,?Dr Michael Greger\'s?How Not To Die?gives effective, scientifically-proven nutritional advice to prevent our biggest killers ? including heart disease, breast cancer, prostate cancer, high blood pressure and diabetes ? and reveals the astounding health benefits that simple dietary choices can provide.', 'Maureen Johnson', 'Health'),
@@ -125,8 +124,8 @@ INSERT INTO `productb` (`id`, `product_name`, `product_price`, `second_price`, `
 (79, 'The Midnight Library', '22.78', '25.0', 'Image/The Midnight Library.jpg', 'Winner of the Goodreads Choice Award for Fiction | A Good Morning America Book Club Pick |?Independent (London) Ten Best Books of the Year', 'Maureen Johnson', 'Sci-Fi,Fantacy'),
 (80, 'Harry Potter and the Sorc', '21.45', '25.0', 'Image/Harry Potter and the Sorcerer\'s Stone.jpg', 'A global phenomenon and cornerstone of contemporary children?s literature, J.K. Rowling?s?Harry Potter?series is both universally adored and critically acclaimed. Now, experience the magic as you?ve never heard it before. The inimitable Jim Dale brings to life an entire cast of characters - from the pinched, nasal whine of Petunia Dursley to the shrill huff of the Sorting Hat to the earnest, wondrous voice of the boy wizard himself.?', 'Maureen Johnson', 'Sci-Fi,Horror'),
 (81, 'Python Crash Course', '10.87', '15.0', 'Image/Python Crash Course.jpg', 'Second edition of the best-selling Python book in the world. A fast-paced, no-nonsense guide to programming in Python. Updated and thoroughly revised to reflect the latest in Python code and practices.', 'Maureen Johnson', 'Technology'),
-(82, 'Designing Data-Intensive ', '16.77', '20.0', 'Image/Designing Data-Intensive Applications.jpg', 'Data is at the center of many challenges in system design today. Difficult issues need to be figured out, such as scalability, consistency, reliability, efficiency, and maintainability. In addition, we have an overwhelming variety of tools, including relational databases, NoSQL datastores, stream or batch processors, and message brokers. What are the right choices for your application? How do you make sense of all these buzzwords?', 'Maureen Johnson', 'Technology,Sci-Fi'),
-(83, 'Hands-On Machine Learning', '40.80', '45.0', 'Image/Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow.jpg', 'Through a series of recent breakthroughs, deep learning has boosted the entire field of machine learning. Now, even programmers who know close to nothing about this technology can use simple, efficient tools to implement programs capable of learning from data. This practical book shows you how.', 'William W. Johnstone', 'Technology'),
+(82, 'Designing Data-Intensive ', '16.77', '20.0', 'Image/Designing Data-Intensive Applications.jpg', 'Data is at the center of many challenges in system design today. Difficult issues need to be figured out, such as scalability, consistency, reliability, efficiency, and maintainability. In addition, we have an overwhelming variety of tools, including relational databases, NoSQL datastores, stream or batch processors, and message brokers. What are the right choices for your application? How do you make sense of all these buzzwords?', 'Maureen Johnson', 'Technology,Sci-F'),
+(83, 'Hands-On Machine Learning', '40.80', '45.0', 'Image/Hands-On Machine Learning with Scikit-Learn.jpg', 'Through a series of recent breakthroughs, deep learning has boosted the entire field of machine learning. Now, even programmers who know close to nothing about this technology can use simple, efficient tools to implement programs capable of learning from data. This practical book shows you how.', 'William W. Johnstone', 'Technology'),
 (84, 'Clean Code', '35.20', '40.0', 'Image/Clean Code.jpg', 'Even bad code can function. But if code isn?t clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn?t have to be that way.', 'William W. Johnstone', 'Technology'),
 (85, 'Elon Musk', '23.77', '30.0', 'Image/Elon Musk.jpg', 'In the spirit of?Steve Jobs?and?Moneyball,?Elon Musk?is both an illuminating and authorized look at the extraordinary life of one of Silicon Valley\'s most exciting, unpredictable, and ambitious entrepreneurs - a real-life Tony Stark - and a fascinating exploration of the renewal of American invention and its new makers.', 'William W. Johnstone', 'Technology'),
 (86, 'Refrigerant Charging and ', '17.88', '20.0', 'Image/Refrigerant Charging and Service Procedures for Air Conditioning.jpg', 'This Paperback is dedicated to those who are eager to learn the HVACR Trade and Refrigerant Charging/Troubleshooting Practices. In this book, you will find Step by Step Procedures for preparing an air conditioning and heat pump system for refrigerant, reading the manifold gauge set, measuring the refrigerants charge level, and troubleshooting problems with the system?s refrigerant flow.', 'William W. Johnstone', 'Technology'),
@@ -139,7 +138,28 @@ INSERT INTO `productb` (`id`, `product_name`, `product_price`, `second_price`, `
 (93, 'Hello, Cruel Heart', '10.99', '12.0', 'Image/Hello, Cruel Heart.jpg', 'An electric new story of teenage Cruella de Vil in an original novel inspired by the upcoming Walt Disney Studios Live Action Film, Cruella.', 'Maureen Johnson', 'Thriller,Fantacy'),
 (94, 'The Shadow Cabinet', '11.23', '14.0', 'Image/The Shadow Cabinet.jpg', 'Time is running out as Rory fights to find her friends and the ghost squad struggles to stop Jane from unleashing her spectral nightmare on the entire city. In the process, they’ll discover the existence of an organization that underpins London itself—and Rory will learn that someone she trusts has been keeping a tremendous secret.', 'Maureen Johnson', 'Thriller,Fiction'),
 (95, '13 Little Blue Envelopes', '12.99', '15.0', 'Image/13 Little Blue Envelopes.jpg', 'Ginny Blackstone never thought she’d spend her summer vacation backpacking across Europe. But that was before she received the first little blue envelope from Aunt Peg.', 'Maureen Johnson', 'Thriller,Horror'),
-(96, 'The Madness Underneath', '20.00', '22.0', 'Image/The madness underneath.jpg', 'There’s a creepy new terror haunting modern-day London. Fresh from defeating a Jack the Ripper killer, Rory must put her new-found hunting skills to the test before all hell breaks loose…', 'Maureen Johnson', 'Thriller,Fantacy');
+(96, 'The Madness Underneath', '20.00', '22.0', 'Image/The madness underneath.jpg', 'There’s a creepy new terror haunting modern-day London. Fresh from defeating a Jack the Ripper killer, Rory must put her new-found hunting skills to the test before all hell breaks loose…', 'Maureen Johnson', 'Thriller,Fantacy'),
+(97, 'aravinda', '32.00', '30.0', 'image/book3.jpg', 'best book in the world', 'nermo', 'Fantacy');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `productb`
+--
+ALTER TABLE `productb`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `productb`
+--
+ALTER TABLE `productb`
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
