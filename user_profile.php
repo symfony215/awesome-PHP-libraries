@@ -15,23 +15,21 @@
     <?php require_once "head.php" ?>
 </head>
 <body>
+    
+
     <?php require_once "nav.php" ?>
     <!--user profile--->
     
     <div class="container">
-        <!--header-->
-        <h3>Hello, Themjana</h3>
-        <br>
-
-        <!--profile details-->
+    <br>
+    <!--profile details-->
         <div class="container">
             <div class="row">
                 <div class="col-sm-2 col-md-2 col-4">
                     <img src="Image/profile.jpg" id="user_img" class="img-fluid"  alt="User_image">
                 </div>
                 <div class="col-sm-10 col-md-10 col-8">
-                    <h6><b>Themjana Lakshana</b></h6>
-                    <p>Thejana.kalu123@gmail.com</p>
+                    <h3>Hello, Themjana</h3>
 
                 </div>
             </div>
