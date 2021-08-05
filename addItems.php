@@ -101,24 +101,38 @@ require_once "./home/homeDb.php";
 
 echo ($_POST['bName']);
 echo ($_POST['categories']);
-echo ($_POST['bimage']);
 
 $bookName = $_POST['bName'];
 $author = $_POST['author'];
 $desc = $_POST['description'];
 $cat = $_POST['categories'];
 $price = $_POST['price'];
-$image = $_POST['bimage'];
-$image2 = $_FILES['bimage']['name'];
-$sprice = $price - 2;
+$sprice = $price + 2;
 
-$folder = "/xampp/htdocs/php_project/image/";
 
-move_uploaded_file($_FILES[' bimage ']['tmp_name '], "$folder" . $_FILES[' bimage '][' name ']);
+if (($_FILES['bimage']['name'] != "")) {
+    // Where the file is going to be stored
+    $target_dir = "/xampp/htdocs/php_project/image/";
+    $file = $_FILES['bimage']['name'];
+    $path = pathinfo($file);
+    $filename = $path['filename'];
+    $ext = $path['extension'];
+    $temp_name = $_FILES['bimage']['tmp_name'];
+    $path_filename_ext = $target_dir . $filename . "." . $ext;
+    $dbpath = "image/" . $filename . "." . $ext;
+
+    // Check if file already exists
+    if (file_exists($path_filename_ext)) {
+        echo "Sorry, file already exists.";
+    } else {
+        move_uploaded_file($temp_name, $path_filename_ext);
+        echo "Congratulations! File Uploaded Successfully.";
+    }
+}
 
 $sql = "INSERT INTO productb (product_name,product_price,second_price,product_image,product_description,product_author,product_category) 
-VALUES ('$bookName','$price','$sprice','$image','$desc','$author','$cat')";
+VALUES ('$bookName','$price','$sprice','$dbpath','$desc','$author','$cat')";
 
-$result = mysqli_query($con, $sql);
+mysqli_query($con, $sql);
 
 ?>
