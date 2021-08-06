@@ -39,9 +39,12 @@
 }
 
 
-/*admin list style*/
+/*admin_profile style*/
 
-.btn-info {
-    background: #9E9E9E;
-    color: red;
+#card_img {
+    transition: transform 0.5s ease;
+}
+
+#card_img:hover {
+    transform: scale(1.1);
 }

@@ -34,10 +34,10 @@
         <!--profile setting-->
         <div  class="row">
             <div class="col-md-4 col-sm-12">
-                <a href="addItems.php"><div class="card h-90" id="abtcard">
+                <div class="card h-20" id="abtcard">
                     <div class="row" id="test" >
                         <div class="col-md-4 col-sm-4 col-4 col-centered" id="test">
-                            <img src="Image/profile/edit.png" class="img-fluid" id="card_img" alt="img">
+                            <a href="addItems.php"><img src="Image/profile/edit.png" class="img-fluid" id="card_img" alt="img"></a> 
                         </div>
                         <div class="col-md-8 col-sm-8 col-8 col-centered" id="test">
                             <h5>Add Book</h5>
@@ -46,12 +46,12 @@
                     </div>                        
                 </div>
             </div>
-            </a>  
+             
             <div class="col-md-4 col-sm-12">
-            <a href="admin_itemList.php"><div class="card h-90" id="abtcard">
+                <div class="card h-90" id="abtcard">
                     <div class="row" id="test" >
                         <div class="col-md-4 col-sm-4 col-4 col-centered" id="test">
-                            <img src="Image/profile/lists.png" class="img-fluid" id="card_img" alt="img">
+                            <a href="admin_itemList.php"><img src="Image/profile/lists.png" class="img-fluid" id="card_img" alt="img"></a>
                         </div>
                         <div class="col-md-8 col-sm-8 col-8 col-centered" id="test">
                             <h5>Edit lists</h5>
@@ -60,9 +60,9 @@
                     </div>                        
                 </div>
             </div>
-            </a>  
+              
             <div class="col-md-4 col-sm-12">
-                <div class="card h-90" id="abtcard">
+               <div class="card h-90" id="abtcard">
                     <div class="row" id="test" >
                         <div class="col-md-4 col-sm-4 col-4 col-centered" id="test">
                         <img src="Image/profile/messages.jpg" class="img-fluid" id="card_img" alt="img">
