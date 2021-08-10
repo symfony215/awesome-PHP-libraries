@@ -30,62 +30,92 @@
                 <div class="col-md-6">
                     <div class="panel text-center">
                         <div class="signup">
-                            <form action="" class="signup-form">
+                            <form action="./includes/signup.inc.php" method="post" class="signup-form">
                                 <h1>Get Started With Your Account</h1>
                                 <table class="name">
                                     <tr>
                                         <td>
                                             <div class="input-feild">
-                                                <input type="text" id="first_name" placeholder="First Name">
+                                                <input type="text" name="name" placeholder="Full Name">
                                             </div>
                                         </td>
-                                        <td>
-                                            <div class="input-feild">
-                                                <input type="text" id="last_name" placeholder="Last Name">
-                                            </div>
-                                        </td>
-                                    </tr>
+
                                 </table>
                                 <div class="contact">
                                     <div class="input-feild">
-                                        <input type="text" id="email" placeholder="E-mail">
+                                        <input type="text" name="email" placeholder="E-mail">
                                     </div>
                                     <div class="input-feild">
-                                        <input type="text" id="address" placeholder="Address">
+                                        <input type="text" name="uid" placeholder="Username">
                                     </div>
-                                    <div class="input-feild">
-                                        <input type="text" id="contact" placeholder="Contact Number">
-                                    </div>
+
                                 </div>
-                                <table class="name">
+                                <table class="pass">
                                     <tr>
                                         <td>
                                             <div class="input-feild">
-                                                <input type="text" id="password" placeholder="Password">
+                                                <input type="password" name="pwd" placeholder="Password">
                                             </div>
                                         </td>
                                         <td>
                                             <div class="input-feild">
-                                                <input type="text" id="confirm_password" placeholder="Confirm Password">
+                                                <input type="password" name="pwdrepeat" placeholder="Re-Password">
                                             </div>
                                         </td>
                                     </tr>
                                 </table>
+
+                                <div class="button">
+                                    <input type="submit" name="submit" value="Submit" class="btn solid font-weight-bold">
+                                </div>
                             </form>
-                            <div class="button">
-                                <input type="submit" value="Sign Up" class="btn solid font-weight-bold">
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <?php
+        if (isset($_GET["erorr"])) {
+            if ($_GET["erorr"] == "emptyinput") {
+                $message = "Please Enter your details...";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+            if ($_GET["erorr"] == "invalidUid") {
+                $message = "Invalid user name..";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+            if ($_GET["erorr"] == "invalidemail") {
+                $message = "Invalid Email..";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+            if ($_GET["erorr"] == "pwdNotMatch") {
+                $message = "Password Does Not Match..";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+            if ($_GET["erorr"] == "usernameTaken") {
+                $message = "Your username or Email has been taken...";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+            if ($_GET["erorr"] == "stmtfailed") {
+                $message = "Something went wrong....! Try Again...!!!";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+            if ($_GET["erorr"] == "none") {
+                $message = "You are Sign In....!";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+        }
+
+        ?>
+
     </section>
-    <!-- linking scripts -->
-    <!-- <script src="script.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
     <?php require_once "footer.php" ?>
     <?php require_once "script.php" ?>
 </body>

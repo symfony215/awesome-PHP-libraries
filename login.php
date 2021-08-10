@@ -33,14 +33,14 @@
                     <div class="panel text-center">
                         <h1>Sign In to Store</h1>
                         <div class="signin">
-                            <form action="" class="signin-form">
+                            <form action="./includes/login.inc.php" method="post" class="signin-form">
                                 <div class="input-feild">
                                     <i class="fas fa-user"></i>
-                                    <input type="text" id="username" placeholder="Username">
+                                    <input type="text" name="uid" placeholder="Username">
                                 </div>
                                 <div class="input-feild">
                                     <i class="fas fa-lock"></i>
-                                    <input type="password" id="password" placeholder="Password">
+                                    <input type="password" name="pwd" placeholder="Password">
                                 </div>
                                 <!-- <div class="remeber">
                                     <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe"> Remember me</label>
@@ -52,12 +52,12 @@
                                     </label>
                                     <label for="rememberMe"> Remember me</label>
                                 </div>
-                                <input type="submit" value="Sign In" class="btn solid font-weight-bold" onclick="lsRememberMe()">
+                                <input type="submit" name="submit" value="Sign In" class="btn solid font-weight-bold">
                                 <div class="forgot">
                                     <span class="psw"><a href="#"> Forgot Password?</a></span>
                                 </div>
                                 <div class="register">
-                                    <span class="join"><b>Don't have an account?</b> <a href="..signup/index.html">Join with us!</a></span>
+                                    <span class="join"><b>Don't have an account?</b> <a href="signup.php">Join with us!</a></span>
                                 </div>
                             </form>
                         </div>
@@ -65,18 +65,26 @@
                 </div>
             </div>
         </div>
+        <?php
+        if (isset($_GET["erorr"])) {
+            if ($_GET["erorr"] == "emptyinput") {
+                $message = "Please Enter your login details...";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+
+            if ($_GET["erorr"] == "wronglogin") {
+                $message = "Login failed..TRY AGAIN...!";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+        }
+        ?>
+
     </div>
 
     <!-- linking scripts -->
     <div>
         <?php require_once "footer.php" ?>
     </div>
-
-    <script src="script.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-
 </body>
 
 </html>
