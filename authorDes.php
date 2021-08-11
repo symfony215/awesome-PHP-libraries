@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $name = $_GET['name'];
 require_once "home/homeDb.php";
 
@@ -39,7 +39,7 @@ while ($rows = $result->fetch_assoc()) {
 
 </head>
 <style>
-    body{
+    body {
         background-image: url(Image/background4.jpg);
         width: 100%;
         height: 100%;

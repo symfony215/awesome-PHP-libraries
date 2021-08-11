@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $name = $_GET['name'];
 require_once "home/homeDb.php";
 

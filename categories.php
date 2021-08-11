@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 
 <head>
@@ -13,7 +16,7 @@
     <?php require_once "head.php" ?>
 </head>
 <style>
-    body{
+    body {
         background-image: url(Image/background4.jpg);
         width: 100%;
         height: 100%;

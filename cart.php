@@ -3,7 +3,7 @@
 require_once("./home/homeDb.php");
 require_once("./home/item-component.php");
 
-
+session_start();
 $sql = "SELECT * FROM productb";
 $result = mysqli_query($con, $sql);
 if (mysqli_num_rows($result) > 0) {

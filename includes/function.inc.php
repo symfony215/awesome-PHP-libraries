@@ -1,4 +1,7 @@
 <?php
+session_start();
+// $_SESSION["userId"] = false;
+// $_SESSION["userUid"] = "nermo";
 function emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat)
 {
     $result;
@@ -110,6 +113,7 @@ function loginUser($conn, $username, $pwd)
         header("location: ../login.php?erorr=wronglogin");
         exit();
     }
+    $_SESSION["userId"] = false;
     $pwdHashed = $uidExists["userPwd"];
     $checkPwd = password_verify($pwd, $pwdHashed);
 

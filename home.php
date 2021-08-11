@@ -1,49 +1,45 @@
 <!--cart funtion-->
 <?php
-    require_once("./home/homeDb.php");
-    require_once("./home/item-component.php");
+require_once("./home/homeDb.php");
+require_once("./home/item-component.php");
 
-    session_start();
-       $sql = "SELECT * FROM productb";
-       $result = mysqli_query($con, $sql);
-       if (mysqli_num_rows($result) > 0) {
+session_start();
+$sql = "SELECT * FROM productb";
+$result = mysqli_query($con, $sql);
+if (mysqli_num_rows($result) > 0) {
 
-            //cart
-            if(isset($_POST['add'])){
-                //print_r($_POST['product_id']);
-                if(isset($_SESSION['cart'])){
-                    $item_array_id = array_column($_SESSION['cart'],"product_id");
-                    //print_r($item_array_id);
+    //cart
+    if (isset($_POST['add'])) {
+        //print_r($_POST['product_id']);
+        if (isset($_SESSION['cart'])) {
+            $item_array_id = array_column($_SESSION['cart'], "product_id");
+            //print_r($item_array_id);
 
-                    if(in_array($_POST['product_id'],$item_array_id)){
-                        echo "<script>alert('Product is already added in the cart..!')</script>";
-                        echo "<script>window.location = 'home.php'</script>";
-                    }else{
-                        $count=count($_SESSION['cart']);
-                        $item_array=array(
-                            'product_id'=>$_POST['product_id']
-                        );
+            if (in_array($_POST['product_id'], $item_array_id)) {
+                echo "<script>alert('Product is already added in the cart..!')</script>";
+                echo "<script>window.location = 'home.php'</script>";
+            } else {
+                $count = count($_SESSION['cart']);
+                $item_array = array(
+                    'product_id' => $_POST['product_id']
+                );
 
-                        $_SESSION['cart'][$count]=$item_array;
-                        
-                        
-                    }
-                    
-                }else{
-                  $item_array = array(
-                      'product_id'=>$_POST['product_id']
-                  );
-                  
-                  //create new session variable
-                  $_SESSION['cart'][0]=$item_array;
-                  print_r($_SESSION['cart']);
-                }
-
+                $_SESSION['cart'][$count] = $item_array;
             }
-        //end cart 
-    } 
-    
-    ?>
+        } else {
+            $item_array = array(
+                'product_id' => $_POST['product_id']
+            );
+
+            //create new session variable
+            $_SESSION['cart'][0] = $item_array;
+            print_r($_SESSION['cart']);
+        }
+    }
+    //end cart 
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +60,7 @@
 
 </head>
 <style>
-    body{
+    body {
         background-image: url(Image/background4.jpg);
         width: 100%;
         height: 100%;
@@ -76,7 +72,7 @@
 </style>
 
 
-<body>
+<body id="homeb">
 
 
 
@@ -95,19 +91,19 @@
             <div class="carousel-item active" id="slide_img">
                 <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
-                   
+
                 </div>
             </div>
             <div class="carousel-item" id="slide_img">
                 <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
-                    
+
                 </div>
             </div>
             <div class="carousel-item" id="slide_img">
                 <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
-                    
+
                 </div>
             </div>
         </div>
@@ -197,7 +193,7 @@
             ?>
         </div>
     </div>
-    
+
 
     <?php require_once "script.php" ?>
 
