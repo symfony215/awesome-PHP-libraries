@@ -59,7 +59,7 @@
        }
        
        #item-grid:hover {
-           background: #bebfc0;
+           background: #9c9d9e;
            color: rgb(22, 20, 20);
            border-radius: 5px;
            border: none;
@@ -104,7 +104,7 @@
        }
        
        #author .card:hover {
-           background: #bebfc0;
+           background: #9c9d9e;
            ;
            color: #fff;
            border-radius: 5px;
@@ -115,4 +115,8 @@
        #author .card:hover h3,
        #author .card:hover i {
            color: #fff;
+       }
+       
+       #aut-grid {
+           margin-bottom: 40px;
        }

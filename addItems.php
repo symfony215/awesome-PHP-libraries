@@ -15,6 +15,17 @@
     <?php require_once "head.php" ?>
 
 </head>
+<style>
+    body{
+        background-image: url(Image/background4.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
 
 <body>
     <?php require_once "nav.php" ?>
@@ -26,7 +37,7 @@
             <div class="card col-md-8">
                 <h2 id="header">Add a New Book</h2>
                 <form method="post" id="frm" enctype="multipart/form-data">
-                    <table class="center">
+                    <table id="frmtbl" class="center">
                         <tr>
                             <td>
                                 <label>Book Name</label>
@@ -75,7 +86,7 @@
                         </tr>
                         <tr>
                             <td id="subbut" colspan="2">
-                                <button class="btn btn-outline-info my-3" type="submit" name="submit" id="submition">GO</button>
+                                <button class="btn btn-outline-dark my-3" type="submit" name="submit" id="submition">GO</button>
                             </td>
                         </tr>
                     </table>

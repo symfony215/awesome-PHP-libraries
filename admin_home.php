@@ -5,6 +5,17 @@
 	<title>Admin-Home</title>
 	<link rel="stylesheet" type="text/css" href="./styles/admin_login.css">
 </head>
+<style>
+    body{
+        background-image: url(Image/background4.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
 <body>
 
 <?php 

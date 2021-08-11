@@ -20,6 +20,17 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link rel="icon" type="image/ico" href="./Image/logo.ico">
     <?php require_once "head.php" ?>
 </head>
+<style>
+    body{
+        background-image: url(Image/background4.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
 <body>
     
 
@@ -103,7 +114,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             <img src="Image/profile/payment.png" class="img-fluid" id="card_img" alt="img">
                         </div>
                         <div class="col-md-8 col-sm-8 col-8 col-centered" id="test">
-                            <h5>Your Payment</h5>
+                            <h5>Payment</h5>
                             <p>Manage payment settings </p>
                         </div>
                     </div>                        
@@ -116,12 +127,29 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             <img src="Image/profile/profiles.png" class="img-fluid" id="card_img" alt="img">
                         </div>
                         <div class="col-md-8 col-sm-8 col-8 col-centered" id="test">
-                            <h5>Your Profile</h5>
+                            <h5>Edit Profile</h5>
                             <p>Manage and remove user profile</p>
                         </div>
                     </div>                        
                 </div>
             </div>  
+        </div>
+
+        <div  class="row">
+            <div class="col-md-4 col-sm-12">
+                <div class="card h-20" id="abtcard">
+                    <div class="row" id="test" >
+                        <div class="col-md-4 col-sm-4 col-4 col-centered" id="test">
+                            <a href="addItems.php"><img src="Image/profile/archived.png" class="img-fluid" id="card_img" alt="img"></a> 
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-8 col-centered" id="test">
+                            <h5>Abandoned Checkouts</h5>
+                            <p>Track Abandoned Checkouts</p>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+              
         </div>
     <div class="logout">
         <a href="logout_admin.php">Logout</a>

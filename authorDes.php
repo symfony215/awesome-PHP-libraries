@@ -38,6 +38,17 @@ while ($rows = $result->fetch_assoc()) {
     <?php require_once "head.php" ?>
 
 </head>
+<style>
+    body{
+        background-image: url(Image/background4.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
 
 <body>
     <header>
@@ -60,7 +71,7 @@ while ($rows = $result->fetch_assoc()) {
                     <div class="card-body">
                         <p class="card-text"><?= htmlentities($dis) ?></p><br>
                         <div class="text-center">
-                            <button type="button" class="btn btn-outline-info">See more</button>
+                            <button type="button" class="btn btn-outline-dark">See more</button>
                         </div>
                     </div>
                 </div>
@@ -68,7 +79,7 @@ while ($rows = $result->fetch_assoc()) {
         </div>
     </div>
 
-
+    <br>
     <!--header2-->
 
     <div class="container">
