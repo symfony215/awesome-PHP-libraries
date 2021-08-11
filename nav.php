@@ -8,7 +8,7 @@ if (isset($_SESSION['cart'])) {
 
 $count = 1;
 if ($count = 1) {
-    $_SESSION['loggedin'] = true;
+    $_SESSION['loggedin'] = false;
     $_SESSION['username'] = "Aravinda";
 }
 $loginStatus = false;
