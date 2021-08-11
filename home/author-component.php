@@ -3,10 +3,10 @@
 
 function component1($authorname, $authorsince,$authorimg, $authorid){
     $element="
-    <div class=\"container col-lg-3 col-md-4 my-3 py-3 text-center \">
+    <div class=\"container col-md-3 col-sm-6 my-3 my-md-0 text-center \">
         <form  action=\"home.php\">
             <div id=\"author\">
-                <div class=\"card\">
+                <div id=\"aut-grid\" class=\"card\" >
                     <div class=\"card-body\">
                         <a href=\"authorDes.php?name=$authorname\" onclick=\"post\">
                         <img src=\"$authorimg\" alt=\"\" class=\"img-fluid rounded-circle w-50 mb-3\">

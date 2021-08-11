@@ -59,6 +59,17 @@ if (mysqli_num_rows($result) > 0) {
     <?php require_once "head.php" ?>
 
 </head>
+<style>
+    body{
+        background-image: url(Image/background4.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
 
 
 <body id="homeb">
@@ -80,19 +91,19 @@ if (mysqli_num_rows($result) > 0) {
             <div class="carousel-item active" id="slide_img">
                 <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
-                    <button type="button" class="btn btn-outline-info">See more</button>
+                   
                 </div>
             </div>
             <div class="carousel-item" id="slide_img">
                 <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
-                    <button type="button" class="btn btn-secondary">See more</button>
+                    
                 </div>
             </div>
             <div class="carousel-item" id="slide_img">
                 <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
-                    <button type="button" class="btn btn-secondary">See more</button>
+                    
                 </div>
             </div>
         </div>
@@ -113,7 +124,7 @@ if (mysqli_num_rows($result) > 0) {
     <!--header1-->
     <div class="container-fluid">
         <div class="header" id="header1">
-            <h5>Top selling</h5>
+            <h4>Top selling</h4>
         </div>
     </div>
     <div class="container-fluid">
@@ -157,7 +168,7 @@ if (mysqli_num_rows($result) > 0) {
     <!--header2-->
     <div class="container-fluid">
         <div class="header" id="header2">
-            <h5>Top Author</h5>
+            <h4>Top Author</h4>
         </div>
     </div>
     <div class="container-fluid">
