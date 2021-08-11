@@ -60,7 +60,7 @@ if (mysqli_num_rows($result) > 0) {
 
 </head>
 <style>
-    body{
+    body {
         background-image: url(Image/background4.jpg);
         width: 100%;
         height: 100%;
@@ -91,19 +91,19 @@ if (mysqli_num_rows($result) > 0) {
             <div class="carousel-item active" id="slide_img">
                 <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
-                   
+
                 </div>
             </div>
             <div class="carousel-item" id="slide_img">
                 <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
-                    
+
                 </div>
             </div>
             <div class="carousel-item" id="slide_img">
                 <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
-                    
+
                 </div>
             </div>
         </div>

@@ -41,7 +41,7 @@ if (mysqli_num_rows($result) > 0) {
 
 </head>
 <style>
-    body{
+    body {
         background-image: url(Image/background4.jpg);
         width: 100%;
         height: 100%;

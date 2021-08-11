@@ -1,25 +1,34 @@
 <?php
 
+// session_start();
 if (isset($_SESSION['cart'])) {
     $numItems = count($_SESSION['cart']);
 } else {
     $numItems = 0;
 }
 
-$count = 1;
-if ($count = 1) {
-    $_SESSION['loggedin'] = false;
-    $_SESSION['username'] = "Aravinda";
-}
 $loginStatus = false;
-if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
+// $_SESSION["userId"] = false;
 
-    $loginStatus = true;
-} else {
-
-    $loginStatus = false;
+if (isset($_SESSION["userId"])) {
+    if ($_SESSION["userId"] = true) {
+        $loginStatus = true;
+        $userName = $_SESSION["userUid"];
+    } else {
+        $loginStatus = false;
+    }
 }
-$userName = $_SESSION['username'];
+
+// if (($_SESSION["userId"]) && ($_SESSION["userId"]) == true) {
+
+//     $loginStatus = true;
+// } else {
+
+//     $loginStatus = false;
+// }
+
+
+
 
 ?>
 
@@ -66,7 +75,7 @@ $userName = $_SESSION['username'];
 
                 if ($loginStatus == true) {
                     echo ("
-    <a class=\"nav-link\" href=\"user.php\"><i class=\"bi bi-person-circle \"> hi $userName</i></a>
+    <a class=\"nav-link\" href=\"user_profile.php\"><i class=\"bi bi-person-circle \"> hi $userName</i></a>
     <a class=\"nav-link\" href=\"cart.php\"><i id=\"cartIco\" class=\"bi bi-cart has-badge\"><span class=\"badge\">3</span></i></a>
     ");
                 } else {
