@@ -117,7 +117,7 @@ function loginUser($conn, $username, $pwd)
         header("location: ../login.php?erorr=wronglogin");
         exit();
     } else if ($checkPwd === true) {
-        session_start();
+
         $_SESSION["userId"] = $uidExists["userId"];
         $_SESSION["userUid"] = $uidExists["userUid"];
         header("location: ../home.php");

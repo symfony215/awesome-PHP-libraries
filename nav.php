@@ -1,25 +1,22 @@
 <?php
-
+session_start();
 if (isset($_SESSION['cart'])) {
     $numItems = count($_SESSION['cart']);
 } else {
     $numItems = 0;
 }
 
-$count = 1;
-if ($count = 1) {
-    $_SESSION['loggedin'] = true;
-    $_SESSION['username'] = "Aravinda";
-}
+
 $loginStatus = false;
-if (($_SESSION['loggedin']) && ($_SESSION['loggedin']) == true) {
+
+if (($_SESSION["userId"]) && ($_SESSION["userId"]) == true) {
 
     $loginStatus = true;
 } else {
 
     $loginStatus = false;
 }
-$userName = $_SESSION['username'];
+$userName = $_SESSION["userUid"];
 
 ?>
 
