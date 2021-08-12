@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./styles/user_profile.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
-    <link rel="icon" type="image/ico" href="./Image/logo.ico">
+    <link rel="icon" type="image/ico" href="./Image/logo1.ico">
     <?php require_once "head.php" ?>
 </head>
 <style>
@@ -70,7 +70,7 @@
                     <td><?php echo $row["product_category"]?></td>
                     <td>
                         <a href="delete_process.php?id=<?php echo $row['id'];?> "class="btn btn-danger">Remove</a>
-                        <a href="admin_itemList?edit=<?php echo $row['id'];?> "class="btn btn-info">Edit</a>
+                        <a href="admin_itemList?edit=<?php echo $row['id'];?> "class="btn btn-dark">Edit</a>
 
                     </td>
                 </tr> 

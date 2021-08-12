@@ -61,10 +61,10 @@ while ($rows = $result->fetch_assoc()) {
                         <div class="row" id="Buttons">
                             <!-- <div class="col-md-2"></div> -->
                             <div class="col">
-                                <button class="btn btn-outline-info my-3" id="buyButton">Buy Now</button>
+                                <button class="btn btn-outline-dark my-3" id="buyButton">Buy Now</button>
                             </div>
                             <div class="col">
-                                <button class="btn btn-outline-info my-3" id="cartButton">Add To Cart</button>
+                                <button class="btn btn-outline-dark my-3" id="cartButton">Add To Cart</button>
                             </div>
                             <!-- <div class="col-md-2"></div> -->
                         </div>

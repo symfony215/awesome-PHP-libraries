@@ -18,7 +18,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <link rel="stylesheet" href="./styles/user_profile.css">
         <link rel="stylesheet" href="./styles/footer.css">
         <link rel="stylesheet" href="./styles/navbar.css" />
-        <link rel="icon" type="image/ico" href="./Image/logo.ico">
+        <link rel="icon" type="image/ico" href="./Image/logo1.ico">
         <?php require_once "head.php" ?>
     </head>
     <style>

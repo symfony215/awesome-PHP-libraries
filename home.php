@@ -47,7 +47,7 @@ if (mysqli_num_rows($result) > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thejana's Bookstore</title>
+    <title>Sarasi Bookstore</title>
 
 
     <!--font awsome-->
@@ -55,7 +55,7 @@ if (mysqli_num_rows($result) > 0) {
     <link rel="stylesheet" href="./styles/home_style.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
-    <link rel="icon" type="image/ico" href="./Image/logo.ico">
+    <link rel="icon" type="image/ico" href="./Image/logo1.ico">
     <?php require_once "head.php" ?>
 
 </head>
@@ -89,7 +89,7 @@ if (mysqli_num_rows($result) > 0) {
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active" id="slide_img">
-                <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
+                <img src="Image/HomeImage2.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
 
                 </div>
@@ -101,7 +101,7 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
             </div>
             <div class="carousel-item" id="slide_img">
-                <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
+                <img src="Image/HomeImage2.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
 
                 </div>

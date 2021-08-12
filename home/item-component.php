@@ -54,8 +54,8 @@ function cartElement($productname, $productprice, $productimg, $productid,$produ
                                 <h5 class=\"pt-2\">$productname</h5>
                                 <h6>by $product_author</h6>
                                 <h6 class=\"pt-2\">$$productprice</h6>
-                                <button type=\"submit\" class=\"btn btn-outline-info\">Save for Later</button>
-                                <button type=\"submit\" class=\"btn btn-outline-info\" name=\"remove\">Remove</button>
+                                <button type=\"submit\" class=\"btn btn-outline-dark\">Save for Later</button>
+                                <button type=\"submit\" class=\"btn btn-outline-dark\" name=\"remove\">Remove</button>
                             </div>
                             <div class=\"col-sm-3 py-5 font-size-8px\">
                                 <div>

@@ -17,7 +17,7 @@ session_start();
     <link rel="stylesheet" href="./styles/user_profile.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
-    <link rel="icon" type="image/ico" href="./Image/logo.ico">
+    <link rel="icon" type="image/ico" href="./Image/logo1.ico">
     <?php require_once "head.php" ?>
 </head>
 <style>
@@ -44,7 +44,7 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-sm-2 col-md-2 col-4">
-                    <img src="Image/profile.jpg" id="user_img" class="img-fluid" alt="User_image">
+                    <img src="Image/profile.png" id="user_img" class="img-fluid" alt="User_image">
                 </div>
                 <div class="col-sm-10 col-md-10 col-8">
                     <h3>Hello,</h3>

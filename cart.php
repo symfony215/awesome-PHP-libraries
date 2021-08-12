@@ -126,7 +126,7 @@ if (mysqli_num_rows($result) > 0) {
 
                     </div>
                 </div>
-                <button id="buyButton" type="submit" class="btn btn-outline-info mt-3">Proceed to Buy</button>
+                <button id="buyButton" type="submit" class="btn btn-outline-dark mt-3">Proceed to Buy</button>
             </div>
 
         </div>
