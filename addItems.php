@@ -28,7 +28,7 @@
 </style>
 
 <body>
-    <?php require_once "nav.php" ?>
+    <?php require_once "admin_navbar.php" ?>
 
     <div class="contaniner">
 
@@ -144,6 +144,8 @@ if (($_FILES['bimage']['name'] != "")) {
 $sql = "INSERT INTO productb (product_name,product_price,second_price,product_image,product_description,product_author,product_category) 
 VALUES ('$bookName','$price','$sprice','$dbpath','$desc','$author','$cat')";
 
-mysqli_query($con, $sql);
+if(isset($price)){
+    mysqli_query($con, $sql);
+}
 
 ?>

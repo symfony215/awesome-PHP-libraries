@@ -51,7 +51,6 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Id</th>
                             <th>Book Name</th>
                             <th>Price ($)</th>
                             <th>Author</th>
@@ -65,7 +64,6 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                     ?>
                         <tr>
-                            <td><?php echo $row["id"]; ?></td>
                             <td><?php echo $row["product_name"]; ?></td>
                             <td><?php echo $row["product_price"]; ?></td>
                             <td><?php echo $row["product_author"]; ?></td>
