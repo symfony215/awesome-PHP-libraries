@@ -55,7 +55,8 @@ if (mysqli_num_rows($result) > 0) {
     <link rel="stylesheet" href="./styles/home_style.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
-    <link rel="icon" type="image/ico" href="./Image/logo1.ico">
+    
+    
     <?php require_once "head.php" ?>
 
 </head>
@@ -95,13 +96,13 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
             </div>
             <div class="carousel-item" id="slide_img">
-                <img src="Image/HomeImage!.jpg" class="d w-100" alt="Image">
+                <img src="Image/HomeImage1.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
 
                 </div>
             </div>
             <div class="carousel-item" id="slide_img">
-                <img src="Image/HomeImage2.jpg" class="d w-100" alt="Image">
+                <img src="Image/HomeImage3.jpg" class="d w-100" alt="Image">
                 <div id="slide-show-btn" class="carousel-caption d d-md">
 
                 </div>
