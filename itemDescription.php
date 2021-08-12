@@ -17,8 +17,6 @@ while ($rows = $result->fetch_assoc()) {
     $category = $rows['product_category'];
 }
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +24,7 @@ while ($rows = $result->fetch_assoc()) {
 
 <head>
     <title><?= htmlentities($name) ?></title>
-    <link rel="icon" type="image/ico" href="./Image/logo.ico">
+    <link rel="icon" type="image/ico" href="./Image/logo1.ico">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/description.css" />
@@ -58,15 +56,17 @@ while ($rows = $result->fetch_assoc()) {
                         <div id="itemPrice">$ <?= htmlentities($price) ?> <s class="text-secondary"> $<?= htmlentities($second) ?></s></div>
                         <div id="itemDescription"><?= htmlentities($dis) ?></div>
 
-                        <div class="row" id="Buttons">
+                    <div class="row" id="Buttons">
+                        
                             <!-- <div class="col-md-2"></div> -->
                             <div class="col">
                                 <button class="btn btn-outline-dark my-3" id="buyButton">Buy Now</button>
                             </div>
                             <div class="col">
-                                <button class="btn btn-outline-dark my-3" id="cartButton">Add To Cart</button>
+                                <button class="btn btn-outline-dark my-3" name="add" id="cartButton">Add To Cart</button>
                             </div>
                             <!-- <div class="col-md-2"></div> -->
+                             
                         </div>
 
                     </div>

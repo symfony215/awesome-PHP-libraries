@@ -88,7 +88,9 @@ if (mysqli_num_rows($result) > 0) {
                         }
                     } else {
                         echo "<h5>Cart is Empty</h5>";
+                        echo "<img src=\"./Image/empty_cart.png\" alt=\"Empty Cart\" class=\"img-fluid\" style=\"height: 200px;\">";
                     }
+                    
 
                     ?>
 
