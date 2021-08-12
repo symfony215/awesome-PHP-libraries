@@ -47,7 +47,7 @@ session_start();
                     <img src="Image/profile.png" id="user_img" class="img-fluid" alt="User_image">
                 </div>
                 <div class="col-sm-10 col-md-10 col-8">
-                    <h3>Hello,</h3>
+                    <h3>Hello </h3>
 
                 </div>
             </div>
@@ -179,6 +179,10 @@ session_start();
                 </div>
             </div>
         </div>
+
+        <div class="logout">
+        <a href="logout_user.php">Logout</a>
+    </div>
 
     </div>
 

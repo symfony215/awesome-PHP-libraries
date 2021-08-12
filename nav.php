@@ -56,7 +56,7 @@ if (isset($_SESSION["userId"])) {
                 if ($loginStatus == true) {
                     echo ("
                     <a class=\"nav-link\" href=\"cart.php\"><i id=\"cartIco\" class=\"bi bi-cart has-badge\"><span class=\"badge\">$numItems</span></i></a>
-                    <a class=\"nav-link\" href=\"user.php\"><i class=\"bi bi-person-circle \"> hi $userName</i></a>");
+                    <a class=\"nav-link\" href=\"user_profile.php\"><i class=\"bi bi-person-circle \"> hi $userName</i></a>");
                 } else {
                     echo ("
                     <a class=\"nav-link\" href=\"login.php\"><i id=\"cartIco\" class=\"bi bi-cart has-badge\"></i></a>

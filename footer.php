@@ -32,8 +32,8 @@
             <div class="col-12 col-sm-12 col-md-4" id="helpCentre">
                 <span>Help Centre</span><br>
                 <div class="container-fluid" id="info">
-                    <span>thejanalakshangothaya@gmail.com</span><br>
-                    <span>0713231978</span>
+                    <span>thejanalakshan@gmail.com</span><br>
+                    <span>+94713231978</span>
                 </div>
                 <hr class="d-block d-sm-none" id="line">
             </div>
