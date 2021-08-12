@@ -33,7 +33,7 @@ if (mysqli_num_rows($result) > 0) {
 
             //create new session variable
             $_SESSION['cart'][0] = $item_array;
-            print_r($_SESSION['cart']);
+           // print_r($_SESSION['cart']);
         }
     }
     //end cart 

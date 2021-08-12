@@ -12,7 +12,7 @@ if (mysqli_num_rows($result) > 0) {
             foreach ($_SESSION['cart'] as $key => $value) {
                 if ($value["product_id"] == $_GET['id']) {
                     unset($_SESSION['cart'][$key]);
-                    echo "<script>window.location = 'cart.php'</script>";
+                    //echo "<script>window.location = 'cart.php'</script>";
                 }
             }
         }

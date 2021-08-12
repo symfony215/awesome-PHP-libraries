@@ -52,6 +52,10 @@
      		<button type="submit">Login</button>
      	</form>
 	 </div>
+	 <br>
+	 <br>
+
+	
 
 	<?php require_once "footer.php" ?>
     <?php require_once "script.php" ?>
