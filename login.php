@@ -52,7 +52,7 @@
                                     </label>
                                     <label for="rememberMe"> Remember me</label>
                                 </div>
-                                <input type="submit" name="submit" value="Sign In" class="btn solid font-weight-bold">
+                                <input type="submit" name="submit" value="Sign In" class="btn btn-primary solid font-weight-bold">
                                 <div class="forgot">
                                     <span class="psw"><a href="#"> Forgot Password?</a></span>
                                 </div>
@@ -61,6 +61,8 @@
                                 </div>
                             </form>
                         </div>
+                        <br>
+                        <a id="adminbtn" class="btn btn btn-light" href="admin_login.php" role="button">Admin</a>
                     </div>
                 </div>
             </div>

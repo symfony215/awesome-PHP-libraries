@@ -66,7 +66,7 @@
                                 </table>
 
                                 <div class="button">
-                                    <input type="submit" name="submit" value="Submit" class="btn solid font-weight-bold">
+                                    <input type="submit" name="submit" value="Submit" class="btn btn-primary solid font-weight-bold">
                                 </div>
                             </form>
                         </div>

@@ -6,7 +6,7 @@
 }
 
 .login{
-    padding: 10vmin 0;
+    padding: 0 0 20vmin 0;
     /* font-family: var(--Akaya); */
 }
 
@@ -209,6 +209,10 @@ label{
 .register a:hover{
     color: #0275d8;
     font-weight: bold;
+}
+
+#adminbtn{
+  padding: ;
 }
 
 
